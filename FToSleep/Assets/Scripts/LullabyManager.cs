@@ -32,6 +32,7 @@ public class LullabyManager : MonoBehaviour
 	protected void Update ()
 	{
 	}
+
 	private void SpawnNewSymbol ()
 	{
 		LullabySheepPooledObject newSymbol = LullabySheepPooledObject.Spawn (startLocation.position, symbolFallSpeed, Random.Range (0, 4), sprites);
