@@ -118,6 +118,7 @@ public class LullabyManager : MonoBehaviour
 
 		matchStarted = false;
 
+		DespawnSymbols ();
 		canvas.gameObject.SetActive (false);
 	}
 
