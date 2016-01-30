@@ -101,7 +101,7 @@ public class LullabyManager : MonoBehaviour
 
 	public void StartGame ()
 	{
-		Debug.Log ("Start Game");
+		Debug.Log ("Start Lullaby Game");
 
 		matchStarted = true;
 		canvas.gameObject.SetActive (true);
@@ -114,7 +114,7 @@ public class LullabyManager : MonoBehaviour
 
 	public void EndGame ()
 	{
-		Debug.Log ("End Game");
+		Debug.Log ("End Lullaby Game");
 
 		matchStarted = false;
 
