@@ -24,9 +24,7 @@ public class LullabySheepPooledObject : MonoBehaviour
 {
 	// singleton list to hold all our projectiles
 	static private List<LullabySheepPooledObject> objectControllers;
-	
-	public int currentDirection = 0;
-	public bool paused = false;
+
 	private float fallSpeed;
 	private Image currentImage;
 	
@@ -44,7 +42,6 @@ public class LullabySheepPooledObject : MonoBehaviour
 				// set it up
 				symbolController.transform.position = location;
 				symbolController.gameObject.GetComponent<Image>().sprite = images[direction];
-				symbolController.currentDirection = direction;
 				symbolController.fallSpeed = fallSpeed;
 				
 				// switch it back on
@@ -111,10 +108,8 @@ public class LullabySheepPooledObject : MonoBehaviour
 	
 	protected void Update()
 	{
-		if (!paused) {
-			// travel in a straight line at 4 units per second
-			transform.position -= transform.up * (Time.deltaTime * fallSpeed);
-		}
+		// travel in a straight line at 4 units per second
+		transform.position -= transform.up * (Time.deltaTime * fallSpeed);
 	}
 	
 	protected void OnBecameInvisible()
