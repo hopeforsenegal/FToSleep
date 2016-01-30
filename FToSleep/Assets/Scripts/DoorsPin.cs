@@ -8,6 +8,13 @@ public class DoorsPin : MonoBehaviour {
 	private Vector3 _downPos = new Vector3 (0.0f, 0.0f, 0.0f);
 	private Vector3 _currentPos;
 
+	public void Insert () {
+		_currentPos = _downPos;
+	}
+
+	public void Bounce () {
+	}
+
 	// Use this for initialization
 	void Start () {
 		_currentPos = _upPos;
@@ -16,9 +23,6 @@ public class DoorsPin : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Space) == true) {
-			_currentPos = _downPos;
-		}
 		UpdatePosition ();
 	}
 

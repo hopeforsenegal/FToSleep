@@ -7,6 +7,18 @@ public class DoorsCylinder : MonoBehaviour {
 	private float _stepAmount = 45.0f;
 	private float _speed = 5.0f;
 
+	public void RotateCylinder () {
+		if (Input.GetAxis ("Horizontal") > 0) {
+			_currentStep--;
+		} else {
+			_currentStep++;
+		}
+	}
+
+	public bool IsInSolvedPosition () {
+		return _currentStep == 0.0f;
+	}
+
 	// Use this for initialization
 	void Start () {
 		_currentStep = (int) Random.Range (0.0f, 7.0f);
@@ -15,13 +27,6 @@ public class DoorsCylinder : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.LeftArrow) == true || Input.GetKeyDown(KeyCode.RightArrow) == true) {
-			if (Input.GetAxis ("Horizontal") > 0) {
-				_currentStep--;
-			} else {
-				_currentStep++;
-			}
-		}
 		UpdateRotation ();
 	}
 
