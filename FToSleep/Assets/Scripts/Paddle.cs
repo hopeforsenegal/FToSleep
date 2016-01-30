@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent (typeof(Rigidbody2D))]
+[RequireComponent (typeof(PlayerInput))]
 public class Paddle : MonoBehaviour
 {
 	public float moveSpeed;
@@ -34,6 +35,10 @@ public class Paddle : MonoBehaviour
 			} else {
 				currentMoveSpeed -= deceleration * Time.deltaTime;
 			}
+
+			Vector3 pos = Camera.main.WorldToViewportPoint (transform.position);
+			pos.x = Mathf.Clamp(pos.x, 0.0f, 0.92f);
+			transform.position = Camera.main.ViewportToWorldPoint(pos);
 		}
 
 		moved = false;

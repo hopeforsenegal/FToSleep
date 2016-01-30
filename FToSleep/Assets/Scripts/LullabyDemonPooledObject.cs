@@ -6,6 +6,7 @@ using System.Collections.Generic;
 //------------------------------------------------------------------------------
 // class definition
 //------------------------------------------------------------------------------
+[RequireComponent (typeof(BoxCollider2D))]
 public class LullabyDemonPooledObject : MonoBehaviour
 {
 	// singleton list to hold all our projectiles
@@ -102,9 +103,7 @@ public class LullabyDemonPooledObject : MonoBehaviour
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		Debug.Log ("demon What up homie?");
 		if (coll.gameObject.name == "Paddle") {
-			Debug.Log ("demon blow up");
 			LullabyManager.Instance.numberOfMisses = 4;
 			gameObject.SetActive (false);
 		}
