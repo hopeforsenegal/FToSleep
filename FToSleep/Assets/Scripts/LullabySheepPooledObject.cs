@@ -98,13 +98,19 @@ public class LullabySheepPooledObject : MonoBehaviour
 	protected void OnBecameInvisible ()
 	{
 		// I've left the screen. Disable myself so I'm available again
-		gameObject.SetActive (false);
+		Debug.Log ("oh shit wadhup?");
+		if (gameObject.activeSelf) {
+			Debug.Log ("careful");
+			LullabyManager.Instance.numberOfMisses++;
+			gameObject.SetActive (false);
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		Debug.Log ("What up homie");
 		if (coll.gameObject.name == "Paddle") {
-			Debug.Log ("oh shit wadhup?");
+			Debug.Log ("blow up");
+			gameObject.SetActive (false);
 		}
 	}
 	

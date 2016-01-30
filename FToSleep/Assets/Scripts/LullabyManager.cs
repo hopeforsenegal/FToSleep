@@ -26,6 +26,7 @@ public class LullabyManager : MonoBehaviour
 	public float symbolFallRate = 2.0f;
 	public float symbolFallSpeed = 130.0f;
 	public Sprite[] sprites;
+	public int numberOfMisses;
 
 	protected void Awake ()
 	{
@@ -47,6 +48,8 @@ public class LullabyManager : MonoBehaviour
 		trackingTime = Time.time;
 		lastSpawnTime = Time.time;
 		deltaTime = Time.time;
+
+		numberOfMisses = 0;
 
 		RestartCountdown ();
 		if (startGameOnLaunch) {
@@ -72,7 +75,13 @@ public class LullabyManager : MonoBehaviour
 			RemainingTimeText.Show (true);
 			trackingTime += Time.deltaTime;
 
-			// If the game is over
+			if (numberOfMisses >= 3) {
+				// increase instanity here
+				EndGame ();
+				return;
+			}
+
+			// If the time has run down 
 			if (countDownEndSeconds <= 0) {
 				EndGame ();
 			}

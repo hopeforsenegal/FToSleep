@@ -262,7 +262,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!224 &426535191
 RectTransform:
   m_ObjectHideFlags: 0
@@ -437,6 +437,7 @@ MonoBehaviour:
   symbolFallSpeed: 130
   sprites:
   - {fileID: 21300000, guid: 24c98eb08ed624b9f8f796ad6ad42f63, type: 3}
+  numberOfMisses: 0
 --- !u!1 &774687339
 GameObject:
   m_ObjectHideFlags: 0
