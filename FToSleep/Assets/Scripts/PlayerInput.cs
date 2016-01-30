@@ -2,13 +2,16 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent (typeof(Paddle))]
+[RequireComponent (typeof(Runner))]
 public class PlayerInput : MonoBehaviour
 {
 	private Paddle paddle;
+	private Runner runner;
 
 	protected void Awake ()
 	{
 		paddle = GetComponent<Paddle> ();
+		runner = GetComponent<Runner> ();
 	}
 
 	protected void Update ()
