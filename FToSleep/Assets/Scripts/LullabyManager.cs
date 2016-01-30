@@ -16,6 +16,7 @@ public class LullabyManager : MonoBehaviour
 
 	private float lastSpawnTime = 0.0f;
 	private float trackingTime = 0.0f;
+	public bool matchStarted;
 	public Transform startLocation;
 	public float symbolFallRate = 2.0f;
 	public float symbolFallSpeed = 130.0f;
@@ -36,16 +37,38 @@ public class LullabyManager : MonoBehaviour
 
 	protected void Update ()
 	{
-		if (trackingTime - lastSpawnTime > symbolFallRate) {
-			lastSpawnTime = trackingTime;
-			SpawnNewSymbol ();
-		}
+		if (IsMatchStarted ()) {
+			if (trackingTime - lastSpawnTime > symbolFallRate) {
+				lastSpawnTime = trackingTime;
+				SpawnNewSymbol ();
+			}
 
-		trackingTime += Time.deltaTime;
+			trackingTime += Time.deltaTime;
+		}
+	}
+
+	public void StartGame ()
+	{
+		Debug.Log ("Start Game");
+
+		matchStarted = true;
+	}
+
+	public bool IsMatchStarted ()
+	{
+		return matchStarted;
+	}
+
+	public void EndGame ()
+	{
+		Debug.Log ("End Game");
+
+		matchStarted = false;
 	}
 
 	private void SpawnNewSymbol ()
 	{
+		Debug.Log ("SpawnNewSymbol");
 		Sprite image = sprites [0];
 		LullabySheepPooledObject newSymbol = LullabySheepPooledObject.Spawn (startLocation.position, symbolFallSpeed, image);
 	}
