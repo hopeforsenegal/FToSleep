@@ -87,7 +87,7 @@ public class LullabyManager : MonoBehaviour
 			trackingTime += Time.deltaTime;
 
 			if (numberOfMisses >= 3) {
-				// increase instanity here
+				InsanityController.IncreaseInsanity ();
 				EndGame ();
 				return;
 			}

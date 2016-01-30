@@ -103,9 +103,7 @@ public class LullabyDemonPooledObject : MonoBehaviour
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		Debug.Log ("demon What up homie?");
 		if (coll.gameObject.name == "Paddle") {
-			Debug.Log ("demon blow up");
 			LullabyManager.Instance.numberOfMisses = 4;
 			gameObject.SetActive (false);
 		}
