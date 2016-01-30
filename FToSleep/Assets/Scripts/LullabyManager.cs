@@ -18,8 +18,10 @@ public class LullabyManager : MonoBehaviour
 	private float lastSpawnTime = 0.0f;
 	private float trackingTime = 0.0f;
 	private int countDownEndSeconds = 0;
+	private Canvas canvas;
 	public int endCountdownTime = 60;
 	public bool matchStarted;
+	public bool startGameOnLaunch;
 	public Transform startLocation;
 	public float symbolFallRate = 2.0f;
 	public float symbolFallSpeed = 130.0f;
@@ -30,6 +32,14 @@ public class LullabyManager : MonoBehaviour
 		if (instance == null) {
 			instance = this;
 		}
+
+		GameObject tempObject;
+		tempObject = GameObject.Find ("Canvas");
+		if (tempObject != null) {
+			canvas = tempObject.GetComponent<Canvas> ();
+			canvas.gameObject.SetActive (false);
+			tempObject = null;
+		}
 	}
 
 	protected void Start ()
@@ -39,6 +49,9 @@ public class LullabyManager : MonoBehaviour
 		deltaTime = Time.time;
 
 		RestartCountdown ();
+		if (startGameOnLaunch) {
+			StartGame ();
+		}
 	}
 
 	protected void Update ()
@@ -71,6 +84,7 @@ public class LullabyManager : MonoBehaviour
 		Debug.Log ("Start Game");
 
 		matchStarted = true;
+		canvas.gameObject.SetActive (true);
 	}
 
 	public bool IsMatchStarted ()
@@ -83,6 +97,8 @@ public class LullabyManager : MonoBehaviour
 		Debug.Log ("End Game");
 
 		matchStarted = false;
+
+		canvas.gameObject.SetActive (false);
 	}
 
 	private void SpawnNewSymbol ()
