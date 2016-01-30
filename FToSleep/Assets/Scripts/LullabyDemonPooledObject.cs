@@ -23,7 +23,7 @@ using System.Collections.Generic;
 public class LullabyDemonPooledObject : MonoBehaviour
 {
 	// singleton list to hold all our projectiles
-	static private List<> symbolControllers;
+	static private List<LullabyDemonPooledObject> symbolControllers;
 	
 	public int currentDirection = 0;
 	public bool paused = false;
