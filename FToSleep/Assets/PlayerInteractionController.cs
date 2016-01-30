@@ -27,7 +27,8 @@ public class PlayerInteractionController : MonoBehaviour {
         bool hitInteractable = Physics.Raycast(ray, out hit, 10.0f, collisionMask);
 
         if (hitInteractable) {
-            Debug.Log("I hit an interactable object");
+            Interactables interactable = hit.collider.GetComponentInParent<Interactables>();
+            AddSceneAdditive(interactable);
         }
 
         Debug.DrawRay(ray.origin, ray.direction*10, Color.red, 100.0f);
