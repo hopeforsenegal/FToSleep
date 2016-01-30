@@ -6,6 +6,7 @@ using System.Collections.Generic;
 //------------------------------------------------------------------------------
 // class definition
 //------------------------------------------------------------------------------
+[RequireComponent (typeof(BoxCollider2D))]
 public class LullabyDemonPooledObject : MonoBehaviour
 {
 	// singleton list to hold all our projectiles
