@@ -6,12 +6,9 @@ using System.Collections.Generic;
 [RequireComponent (typeof(Rigidbody2D))]
 public class Paddle : MonoBehaviour
 {
-	public float maxMoveSpeed;
-	private float moveDeadZone;
-	public float moveAcceleration;
-	private float deceleration;
-	private float slowMoveSpeedRatio;
-	private float fastMoveSpeedRatio;
+	public float moveSpeed;
+	public float moveDeadZone;
+	public float deceleration;
 
 	private bool moved;
 	private float currentMoveSpeed;
@@ -31,6 +28,7 @@ public class Paddle : MonoBehaviour
 
 		if (!moved) {
 			if (Mathf.Abs (currentMoveSpeed) < moveDeadZone) {
+				Debug.Log ("Stopping currentMoveSpeed:" + Mathf.Abs (currentMoveSpeed));
 				currentMoveSpeed = 0;
 			} else if (currentMoveSpeed < 0) {
 				currentMoveSpeed += deceleration * Time.deltaTime;
@@ -45,14 +43,12 @@ public class Paddle : MonoBehaviour
 	public void MoveLeft ()
 	{
 		moved = true;
-		currentMoveSpeed -= moveAcceleration * Time.deltaTime;
-		currentMoveSpeed = Mathf.Max (-1 * maxMoveSpeed, currentMoveSpeed);
+		currentMoveSpeed = -moveSpeed;
 	}
 
 	public void MoveRight ()
 	{
 		moved = true;
-		currentMoveSpeed += moveAcceleration * Time.deltaTime;
-		currentMoveSpeed = Mathf.Min (maxMoveSpeed, currentMoveSpeed);
+		currentMoveSpeed = moveSpeed;
 	}
 }

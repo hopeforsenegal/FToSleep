@@ -11,22 +11,21 @@ public class PlayerInput : MonoBehaviour
 		paddle = GetComponent<Paddle> ();
 	}
 
-	protected void Update ()
-	{
+	protected void Update (){
 		if (Input.GetButtonDown ("Horizontal") && Input.GetAxisRaw ("Horizontal") > 0) {
 			// Move to the right
 			paddle.MoveRight ();
-			Debug.Log ("RIGHT was pressed", gameObject);
+			Debug.Log ("RIGHT was pressed");
 		} else if (Input.GetButtonDown ("Horizontal") && Input.GetAxisRaw ("Horizontal") < 0) {
 			// Move to the left
 			paddle.MoveLeft ();
-			Debug.Log ("LEFT was pressed", gameObject);
+			Debug.Log ("LEFT was pressed");
 		} else if (Input.GetButtonDown ("Vertical") && Input.GetAxisRaw ("Vertical") > 0) {
 			// Move up
-			Debug.Log ("UP was pressed", gameObject);
+			Debug.Log ("UP was pressed");
 		} else if (Input.GetButtonDown ("Vertical") && Input.GetAxisRaw ("Vertical") < 0) {
 			// Move down
-			Debug.Log ("DOWN was pressed", gameObject);
+			Debug.Log ("DOWN was pressed");
 		}
 	}
 }
