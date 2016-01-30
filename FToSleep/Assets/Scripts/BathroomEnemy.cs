@@ -13,8 +13,4 @@ public class BathroomEnemy : MonoBehaviour
 			gameObject.SetActive (false);
 		}
 	}
-
-	void OnCollisionExit2D(Collision2D coll) {
-		Debug.Log ("What blagksdjflsa tho?");
-	}
 }
