@@ -100,6 +100,13 @@ public class LullabySheepPooledObject : MonoBehaviour
 		// I've left the screen. Disable myself so I'm available again
 		gameObject.SetActive (false);
 	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+		Debug.Log ("What up homie");
+		if (coll.gameObject.name == "Paddle") {
+			Debug.Log ("oh shit wadhup?");
+		}
+	}
 	
 	//--------------------------------------------------------------------------
 	// private methods

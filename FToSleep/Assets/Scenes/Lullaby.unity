@@ -401,6 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endCountdownTime: 60
   matchStarted: 0
+  startGameOnLaunch: 1
   startLocation: {fileID: 47711898}
   symbolFallRate: 2
   symbolFallSpeed: 130
