@@ -70,7 +70,9 @@ public class LullabyManager : MonoBehaviour
 	{
 		Debug.Log ("SpawnNewSymbol");
 		Sprite image = sprites [0];
-		LullabySheepPooledObject newSymbol = LullabySheepPooledObject.Spawn (startLocation.position, symbolFallSpeed, image);
+		Vector3 newPosition = new Vector3(startLocation.position.x, startLocation.position.y);
+		newPosition.x = Random.Range (-startLocation.position.x, startLocation.position.x);
+		LullabySheepPooledObject newSymbol = LullabySheepPooledObject.Spawn (newPosition, symbolFallSpeed, image);
 	}
 
 	private void DespawnSymbols ()

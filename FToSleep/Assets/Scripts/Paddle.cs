@@ -28,7 +28,6 @@ public class Paddle : MonoBehaviour
 
 		if (!moved) {
 			if (Mathf.Abs (currentMoveSpeed) < moveDeadZone) {
-				Debug.Log ("Stopping currentMoveSpeed:" + Mathf.Abs (currentMoveSpeed));
 				currentMoveSpeed = 0;
 			} else if (currentMoveSpeed < 0) {
 				currentMoveSpeed += deceleration * Time.deltaTime;

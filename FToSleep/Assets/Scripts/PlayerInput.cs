@@ -11,7 +11,8 @@ public class PlayerInput : MonoBehaviour
 		paddle = GetComponent<Paddle> ();
 	}
 
-	protected void Update (){
+	protected void Update ()
+	{
 		if (Input.GetButtonDown ("Horizontal") && Input.GetAxisRaw ("Horizontal") > 0) {
 			// Move to the right
 			paddle.MoveRight ();
