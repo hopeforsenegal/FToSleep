@@ -23,7 +23,7 @@ using System.Collections.Generic;
 public class LullabySheepPooledObject : MonoBehaviour
 {
 	// singleton list to hold all our projectiles
-	static private List<LullabySheepPooledObject> symbolControllers;
+	static private List<LullabySheepPooledObject> objectControllers;
 	
 	public int currentDirection = 0;
 	public bool paused = false;
@@ -36,7 +36,7 @@ public class LullabySheepPooledObject : MonoBehaviour
 	static public LullabySheepPooledObject Spawn( Vector3 location, float fallSpeed, int direction, Sprite[] images )
 	{
 		// search for the first free LullabySheepPooledObject
-		foreach( LullabySheepPooledObject symbolController in symbolControllers )
+		foreach( LullabySheepPooledObject symbolController in objectControllers )
 		{
 			// if disabled, then it's available
 			if( symbolController.gameObject.activeSelf == false )
@@ -64,7 +64,7 @@ public class LullabySheepPooledObject : MonoBehaviour
 
 	static public void ResetControllers(){
 		
-		foreach (LullabySheepPooledObject symbolController in symbolControllers) {
+		foreach (LullabySheepPooledObject symbolController in objectControllers) {
 			symbolController.gameObject.SetActive(false);
 		}
 	}
@@ -75,24 +75,24 @@ public class LullabySheepPooledObject : MonoBehaviour
 	protected void Awake()
 	{
 		// does the pool exist yet?
-		if( symbolControllers == null )
+		if( objectControllers == null )
 		{
 			// lazy initialize it
-			symbolControllers = new List<LullabySheepPooledObject>();
+			objectControllers = new List<LullabySheepPooledObject>();
 		}
 		// add myself
-		symbolControllers.Add(this);
+		objectControllers.Add(this);
 	}
 	
 	protected void OnDestroy()
 	{
 		// remove myself from the pool
-		symbolControllers.Remove(this);
+		objectControllers.Remove(this);
 		// was I the last one?
-		if(symbolControllers.Count == 0)
+		if(objectControllers.Count == 0)
 		{
 			// remove the pool itself
-			symbolControllers = null;
+			objectControllers = null;
 		}
 	}
 	
