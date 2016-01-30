@@ -9,7 +9,7 @@ using System.Collections.Generic;
 public class LullabyDemonPooledObject : MonoBehaviour
 {
 	// singleton list to hold all our projectiles
-	static private List<LullabyDemonPooledObject> symbolControllers;
+	static private List<LullabyDemonPooledObject> objectControllers;
 
 	private float fallSpeed;
 	private Image currentImage;
@@ -20,19 +20,19 @@ public class LullabyDemonPooledObject : MonoBehaviour
 	static public LullabyDemonPooledObject Spawn (Vector3 location, float fallSpeed, int direction, Sprite[] images)
 	{
 		// search for the first free LullabyDemonPooledObject
-		foreach (LullabyDemonPooledObject symbolController in symbolControllers) {
+		foreach (LullabyDemonPooledObject objectController in objectControllers) {
 			// if disabled, then it's available
-			if (symbolController.gameObject.activeSelf == false) {
+			if (objectController.gameObject.activeSelf == false) {
 				// set it up
-				symbolController.transform.position = location;
-				symbolController.gameObject.GetComponent<Image> ().sprite = images [direction];
-				symbolController.fallSpeed = fallSpeed;
+				objectController.transform.position = location;
+				objectController.gameObject.GetComponent<Image> ().sprite = images [direction];
+				objectController.fallSpeed = fallSpeed;
 				
 				// switch it back on
-				symbolController.gameObject.SetActive (true);
+				objectController.gameObject.SetActive (true);
 				
 				// return a reference to the caller
-				return symbolController;
+				return objectController;
 				
 			}
 		}
@@ -46,8 +46,8 @@ public class LullabyDemonPooledObject : MonoBehaviour
 	static public void ResetControllers ()
 	{
 		
-		foreach (LullabyDemonPooledObject symbolController in symbolControllers) {
-			symbolController.gameObject.SetActive (false);
+		foreach (LullabyDemonPooledObject objectController in objectControllers) {
+			objectController.gameObject.SetActive (false);
 		}
 	}
 	
@@ -57,22 +57,22 @@ public class LullabyDemonPooledObject : MonoBehaviour
 	protected void Awake ()
 	{
 		// does the pool exist yet?
-		if (symbolControllers == null) {
+		if (objectControllers == null) {
 			// lazy initialize it
-			symbolControllers = new List<LullabyDemonPooledObject> ();
+			objectControllers = new List<LullabyDemonPooledObject> ();
 		}
 		// add myself
-		symbolControllers.Add (this);
+		objectControllers.Add (this);
 	}
 
 	protected void OnDestroy ()
 	{
 		// remove myself from the pool
-		symbolControllers.Remove (this);
+		objectControllers.Remove (this);
 		// was I the last one?
-		if (symbolControllers.Count == 0) {
+		if (objectControllers.Count == 0) {
 			// remove the pool itself
-			symbolControllers = null;
+			objectControllers = null;
 		}
 	}
 

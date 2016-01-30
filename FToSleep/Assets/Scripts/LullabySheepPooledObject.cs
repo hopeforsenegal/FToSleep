@@ -20,19 +20,19 @@ public class LullabySheepPooledObject : MonoBehaviour
 	static public LullabySheepPooledObject Spawn (Vector3 location, float fallSpeed, int direction, Sprite[] images)
 	{
 		// search for the first free LullabySheepPooledObject
-		foreach (LullabySheepPooledObject symbolController in objectControllers) {
+		foreach (LullabySheepPooledObject objectController in objectControllers) {
 			// if disabled, then it's available
-			if (symbolController.gameObject.activeSelf == false) {
+			if (objectController.gameObject.activeSelf == false) {
 				// set it up
-				symbolController.transform.position = location;
-				symbolController.gameObject.GetComponent<Image> ().sprite = images [direction];
-				symbolController.fallSpeed = fallSpeed;
+				objectController.transform.position = location;
+				objectController.gameObject.GetComponent<Image> ().sprite = images [direction];
+				objectController.fallSpeed = fallSpeed;
 				
 				// switch it back on
-				symbolController.gameObject.SetActive (true);
+				objectController.gameObject.SetActive (true);
 				
 				// return a reference to the caller
-				return symbolController;
+				return objectController;
 				
 			}
 		}
@@ -46,8 +46,8 @@ public class LullabySheepPooledObject : MonoBehaviour
 	static public void ResetControllers ()
 	{
 		
-		foreach (LullabySheepPooledObject symbolController in objectControllers) {
-			symbolController.gameObject.SetActive (false);
+		foreach (LullabySheepPooledObject objectController in objectControllers) {
+			objectController.gameObject.SetActive (false);
 		}
 	}
 	
