@@ -1,18 +1,4 @@
-﻿/**
-All material in this application solution and source is, unless otherwise stated, 
-the property of Kamau Vassall, Jorge Munoz, Oliver Plunket, Jeremy Bader 
-Copyright and other intellectual property laws protect these materials. 
-Reproduction or retransmission of the materials, in whole or in part, 
-in any manner, without the prior written consent of the copyright holder,
-is a violation of copyright law.
-
-Originating Author: Kamau Vassall, Jorge Munoz, Oliver Plunket, Jeremy Bader 
-
-*----------------------------------------------------------------
-* SymbolController.cs : Handles the creation for the falling symbols
-*----------------------------------------------------------------
-*/
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -31,21 +17,19 @@ public class LullabyDemonPooledObject : MonoBehaviour
 	//--------------------------------------------------------------------------
 	// static public methods
 	//--------------------------------------------------------------------------
-	static public LullabyDemonPooledObject Spawn( Vector3 location, float fallSpeed, int direction, Sprite[] images )
+	static public LullabyDemonPooledObject Spawn (Vector3 location, float fallSpeed, int direction, Sprite[] images)
 	{
 		// search for the first free LullabyDemonPooledObject
-		foreach( LullabyDemonPooledObject symbolController in symbolControllers )
-		{
+		foreach (LullabyDemonPooledObject symbolController in symbolControllers) {
 			// if disabled, then it's available
-			if( symbolController.gameObject.activeSelf == false )
-			{
+			if (symbolController.gameObject.activeSelf == false) {
 				// set it up
 				symbolController.transform.position = location;
-				symbolController.gameObject.GetComponent<Image>().sprite = images[direction];
+				symbolController.gameObject.GetComponent<Image> ().sprite = images [direction];
 				symbolController.fallSpeed = fallSpeed;
 				
 				// switch it back on
-				symbolController.gameObject.SetActive(true);
+				symbolController.gameObject.SetActive (true);
 				
 				// return a reference to the caller
 				return symbolController;
@@ -59,62 +43,61 @@ public class LullabyDemonPooledObject : MonoBehaviour
 		return null;
 	}
 
-	static public void ResetControllers(){
+	static public void ResetControllers ()
+	{
 		
 		foreach (LullabyDemonPooledObject symbolController in symbolControllers) {
-			symbolController.gameObject.SetActive(false);
+			symbolController.gameObject.SetActive (false);
 		}
 	}
 	
 	//--------------------------------------------------------------------------
 	// protected mono methods
 	//--------------------------------------------------------------------------
-	protected void Awake()
+	protected void Awake ()
 	{
 		// does the pool exist yet?
-		if( symbolControllers == null )
-		{
+		if (symbolControllers == null) {
 			// lazy initialize it
-			symbolControllers = new List<LullabyDemonPooledObject>();
+			symbolControllers = new List<LullabyDemonPooledObject> ();
 		}
 		// add myself
-		symbolControllers.Add(this);
+		symbolControllers.Add (this);
 	}
-	
-	protected void OnDestroy()
+
+	protected void OnDestroy ()
 	{
 		// remove myself from the pool
-		symbolControllers.Remove(this);
+		symbolControllers.Remove (this);
 		// was I the last one?
-		if(symbolControllers.Count == 0)
-		{
+		if (symbolControllers.Count == 0) {
 			// remove the pool itself
 			symbolControllers = null;
 		}
 	}
-	
-	protected void OnDisable()
+
+	protected void OnDisable ()
 	{
 	}
-	
-	protected void OnEnable()
+
+	protected void OnEnable ()
 	{
 	}
-	
-	protected void Start()
+
+	protected void Start ()
 	{
-		gameObject.SetActive(false);
+		gameObject.SetActive (false);
 	}
-	
-	protected void Update()
+
+	protected void Update ()
 	{
 		transform.position -= transform.up * (Time.deltaTime * fallSpeed);
 	}
-	
-	protected void OnBecameInvisible()
+
+	protected void OnBecameInvisible ()
 	{
 		// I've left the screen. Disable myself so I'm available again
-		gameObject.SetActive(false);
+		gameObject.SetActive (false);
 	}
 	
 	//--------------------------------------------------------------------------
