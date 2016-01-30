@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent (typeof(Rigidbody2D))]
+[RequireComponent (typeof(PlayerInput))]
 public class Paddle : MonoBehaviour
 {
 	public float moveSpeed;

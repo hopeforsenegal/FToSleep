@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
+[RequireComponent (typeof(PlayerInput))]
 public class Runner : MonoBehaviour
 {
 	private bool attack;

@@ -1,8 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof(Paddle))]
-[RequireComponent (typeof(Runner))]
 public class PlayerInput : MonoBehaviour
 {
 	private Paddle paddle;
@@ -18,11 +16,15 @@ public class PlayerInput : MonoBehaviour
 	{
 		if (Input.GetButtonDown ("Horizontal") && Input.GetAxisRaw ("Horizontal") > 0) {
 			// Move to the right
-			paddle.MoveRight ();
+			if (paddle) {
+				paddle.MoveRight ();
+			}
 			Debug.Log ("RIGHT was pressed");
 		} else if (Input.GetButtonDown ("Horizontal") && Input.GetAxisRaw ("Horizontal") < 0) {
 			// Move to the left
-			paddle.MoveLeft ();
+			if (paddle) {
+				paddle.MoveLeft ();
+			}
 			Debug.Log ("LEFT was pressed");
 		} else if (Input.GetButtonDown ("Vertical") && Input.GetAxisRaw ("Vertical") > 0) {
 			// Move up
@@ -30,6 +32,12 @@ public class PlayerInput : MonoBehaviour
 		} else if (Input.GetButtonDown ("Vertical") && Input.GetAxisRaw ("Vertical") < 0) {
 			// Move down
 			Debug.Log ("DOWN was pressed");
+		} else if (Input.GetButtonDown ("Jump")) {
+			// Attack
+			Debug.Log ("ATTACK was pressed");
+			if (runner) {
+				runner.Attack ();
+			}
 		}
 	}
 }

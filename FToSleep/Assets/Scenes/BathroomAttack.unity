@@ -256,6 +256,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1064530520}
   - 114: {fileID: 1064530521}
+  - 114: {fileID: 1064530522}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
@@ -285,6 +286,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12857a1f658d24af09cd1b1333f5fceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1064530522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1064530519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a76def91e2a14c3a9c8ea72698f7c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1370988271
