@@ -19,6 +19,7 @@ public class MetagameController : MonoBehaviour
 	private TransformData playerTransformData;
 	private int insanity = 0;
 	public bool[] gamesPlayed = new bool[4];
+	public bool[] gamesWon = new bool[4];
 	public AudioClip startSoundEffect;
 	public AudioClip insanityFail;
 	private string nextSceneToLoad;
@@ -30,7 +31,7 @@ public class MetagameController : MonoBehaviour
 	private float deltaTime = 0.0f;
 	private float trackingTime = 0.0f;
 	private int countDownEndSeconds = 0;
-	private int lastPlayedGame;
+	public int lastPlayedGame;
 	public int endCountdownTime = 300;
 
 	protected void Awake ()
@@ -81,15 +82,15 @@ public class MetagameController : MonoBehaviour
 				//RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
 			}
 
-			if (gamesPlayed [1] == true && gamesPlayed [2] == true && true && gamesPlayed [3] == true && SceneManager.GetActiveScene().name.Contains("Main")) {
-
-				MetagameController.SetNextSplashScreenBackground (winSprite);
-				SceneManager.LoadScene ("SplashScreen");
+			if (gamesWon [1] == true && gamesWon [2] == true  && gamesWon [3] == true && SceneManager.GetActiveScene().name.Contains("Main")) {
+				WinGame ();
+				return;
 			}
 
 			if (Input.GetButtonDown ("Cancel")) {
 				Debug.Log ("Escape!!!!!!!!");
-				EndGame ();
+				LoseGame ();
+				return;
 			}
 
 			//RemainingTimeText.Show (true);
@@ -97,9 +98,8 @@ public class MetagameController : MonoBehaviour
 
 			// If the time has run down 
 			if (countDownEndSeconds <= 0) {
-				MetagameController.SetNextSplashScreenBackground (loseSprite);
-				SceneManager.LoadScene ("SplashScreen");
-				EndGame ();
+				LoseGame ();
+				return;
 			}
 		}
 	}
@@ -109,14 +109,26 @@ public class MetagameController : MonoBehaviour
 		Debug.Log ("Start Overall Game");
 		AudioController.PlaySoundEffect (startSoundEffect);
 		gamesPlayed = new bool[4]{false, false, false, false};
+		gamesWon = new bool[4]{false, false, false, false};
 		gameRunning = true;
 	}
 
-	public void EndGame ()
+	public void LoseGame ()
 	{
 		gameRunning = false;
 		Debug.Log ("End Overall Game");
-		SceneManager.LoadScene ("Start");
+		MetagameController.SetNextSceneToLoad ("Start");
+		MetagameController.SetNextSplashScreenBackground (loseSprite);
+		SceneManager.LoadScene ("SplashScreen");
+	}
+
+	public void WinGame ()
+	{
+		gameRunning = false;
+		Debug.Log ("End Overall Game - Win");
+		MetagameController.SetNextSceneToLoad ("Start");
+		MetagameController.SetNextSplashScreenBackground (winSprite);
+		SceneManager.LoadScene ("SplashScreen");
 	}
 
 	public static void GoToMain ()
@@ -125,9 +137,8 @@ public class MetagameController : MonoBehaviour
 			//to make sure we dont load into scenes that dont exist
 			string sceneToLoad = "Main" + ((GetInsanity () > 0 && GetInsanity () < 3) ? "" + GetInsanity () : "");
 			if (GetInsanity () >= 3) {
-				sceneToLoad = "SplashScreen";
-				MetagameController.SetNextSceneToLoad ("Start");
-				MetagameController.SetNextSplashScreenBackground (instance.loseSprite);
+				instance.LoseGame ();
+				return;
 			}
 
 			Debug.Log ("GoToMain:" + sceneToLoad);
@@ -201,6 +212,14 @@ public class MetagameController : MonoBehaviour
 			Debug.Log ("playing:" + game);
 			instance.gamesPlayed [game] = true;
 			instance.lastPlayedGame = game;
+		}
+	}
+
+	public static void SetWonGame (int game)
+	{
+		if (IsActive ()) {
+			Debug.Log ("won:" + game);
+			instance.gamesWon [game] = true;
 		}
 	}
 
