@@ -19,6 +19,9 @@ public class DoorsManager : MonoBehaviour {
 	public bool matchStarted;
 	public bool startGameOnLaunch;
 
+	public DoorsCylinderController[] cylinderControllers;
+	private int _currentCylinderIndex = 0;
+
 	protected void Awake ()
 	{
 		if (instance == null) {
@@ -63,6 +66,7 @@ public class DoorsManager : MonoBehaviour {
 		Debug.Log ("Start Doors Game");
 
 		matchStarted = true;
+		cylinderControllers [_currentCylinderIndex].StartCylinderPuzzle ();
 	}
 
 	public bool IsMatchStarted ()
@@ -75,6 +79,15 @@ public class DoorsManager : MonoBehaviour {
 		Debug.Log ("End Doors Game");
 
 		matchStarted = false;
+	}
+
+	public void CylinderComplete () {
+		_currentCylinderIndex++;
+		if (_currentCylinderIndex == cylinderControllers.Length) {
+			EndGame ();
+		} else {
+			cylinderControllers [_currentCylinderIndex].StartCylinderPuzzle ();
+		}
 	}
 
 	public void RestartCountdown ()
