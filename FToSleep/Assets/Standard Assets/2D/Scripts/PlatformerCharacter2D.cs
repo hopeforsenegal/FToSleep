@@ -110,5 +110,21 @@ namespace UnityStandardAssets._2D
             theScale.x *= -1;
             transform.localScale = theScale;
         }
+
+        public void Attack()
+        {
+            Debug.Log("Attack");
+
+            GameObject pivot = GameObject.FindGameObjectWithTag("Pivot");
+            if( pivot != null)
+            {
+                Debug.Log(pivot);
+            }
+            else
+            {
+                Debug.Log("Cannot find Pivot");
+            }
+        }
+
     }
 }
