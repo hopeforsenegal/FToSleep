@@ -1359,6 +1359,7 @@ MonoBehaviour:
   m_id: 3
   m_SceneToLoad: Lullaby
   m_PromptMessage: I'm so tired, I need to sleep
+  m_PromptSound: {fileID: 0}
 --- !u!65 &518994449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1854,6 +1855,7 @@ MonoBehaviour:
   m_id: 2
   m_SceneToLoad: Bathroom
   m_PromptMessage: I gotta go so bad!
+  m_PromptSound: {fileID: 0}
 --- !u!65 &640728758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3055,8 +3057,8 @@ Transform:
   m_PrefabParentObject: {fileID: 498838, guid: 8f183f51db916b14e9ba5c00d47d1453, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1024842026}
-  m_LocalRotation: {x: -0.31574848, y: 0.3155251, z: -0.63280636, w: 0.63269496}
-  m_LocalPosition: {x: 4.053636, y: -2.5614192, z: 6.8788333}
+  m_LocalRotation: {x: -0.22607052, y: 0.22586474, z: -0.6700992, w: 0.6699585}
+  m_LocalPosition: {x: 4.68, y: -2.5614192, z: 5.9999995}
   m_LocalScale: {x: 0.006765493, y: 0.016463868, z: 0.016463852}
   m_Children: []
   m_Father: {fileID: 149883099}
@@ -3202,8 +3204,8 @@ Transform:
   m_PrefabParentObject: {fileID: 493426, guid: 8f183f51db916b14e9ba5c00d47d1453, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1059250173}
-  m_LocalRotation: {x: 0.43045938, y: 0.5609855, z: 0.5609855, w: -0.43045938}
-  m_LocalPosition: {x: 4.0705004, y: -2.5670404, z: 5.438169}
+  m_LocalRotation: {x: 0.34953994, y: 0.6146721, z: 0.6146721, w: -0.34953994}
+  m_LocalPosition: {x: 4.69, y: -2.5670404, z: 4.5589995}
   m_LocalScale: {x: 0.8995858, y: 0.8995846, z: 0.89958566}
   m_Children: []
   m_Father: {fileID: 149883099}
@@ -5840,6 +5842,7 @@ GameObject:
   - 4: {fileID: 1716472276}
   - 33: {fileID: 1716472278}
   - 23: {fileID: 1716472277}
+  - 95: {fileID: 1716472279}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -5895,6 +5898,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1716472275}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1716472279
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1716472275}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b9e9595ceb506742aa91f36a6647d9c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1731345173
 GameObject:
   m_ObjectHideFlags: 0
@@ -6196,8 +6216,8 @@ Transform:
   m_PrefabParentObject: {fileID: 487944, guid: 8f183f51db916b14e9ba5c00d47d1453, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1795846164}
-  m_LocalRotation: {x: 0.5416753, y: -0.5416752, z: -0.45451948, w: 0.45451954}
-  m_LocalPosition: {x: 4.0054536, y: -2.505206, z: 6.894893}
+  m_LocalRotation: {x: 0.5988406, y: -0.5988405, z: -0.37601867, w: 0.37601873}
+  m_LocalPosition: {x: 4.63, y: -2.505206, z: 6.0160003}
   m_LocalScale: {x: 0.0130789, y: 0.011396689, z: 0.013078884}
   m_Children: []
   m_Father: {fileID: 149883099}
@@ -6262,8 +6282,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400566, guid: 8f183f51db916b14e9ba5c00d47d1453, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837610701}
-  m_LocalRotation: {x: 0.7071066, y: 0, z: 0, w: -0.70710695}
-  m_LocalPosition: {x: 4.0374117, y: -3.1441574, z: 6.182791}
+  m_LocalRotation: {x: 0.65612364, y: 0.26363155, z: 0.26363155, w: -0.656124}
+  m_LocalPosition: {x: 4.66, y: -3.1441574, z: 5.3040004}
   m_LocalScale: {x: 57.029587, y: 57.029675, z: 18.784431}
   m_Children: []
   m_Father: {fileID: 149883099}
@@ -7477,6 +7497,7 @@ MonoBehaviour:
   m_id: 1
   m_SceneToLoad: Doors
   m_PromptMessage: No matter what, I can't let them in!
+  m_PromptSound: {fileID: 0}
 --- !u!65 &2081653645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7641,7 +7662,7 @@ Transform:
   m_PrefabParentObject: {fileID: 404072, guid: 8f183f51db916b14e9ba5c00d47d1453, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2118708391}
-  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalRotation: {x: -0.5, y: -0.49999997, z: -0.50000006, w: 0.5}
   m_LocalPosition: {x: 4.12, y: -3.294, z: 6.012791}
   m_LocalScale: {x: 38.452854, y: 38.452885, z: 3.9202893}
   m_Children: []
