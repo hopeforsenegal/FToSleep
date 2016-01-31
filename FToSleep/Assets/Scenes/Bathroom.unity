@@ -1343,7 +1343,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 469220, guid: 31ebdfa33e3762b49bec52d95371c1f0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8
+      value: -9.2
       objectReference: {fileID: 0}
     - target: {fileID: 469220, guid: 31ebdfa33e3762b49bec52d95371c1f0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1383,7 +1383,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11439982, guid: 31ebdfa33e3762b49bec52d95371c1f0, type: 2}
       propertyPath: m_MaxSpeed
-      value: 0
+      value: 9.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31ebdfa33e3762b49bec52d95371c1f0, type: 2}
@@ -3828,6 +3828,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5028518, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
       propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21268550, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21268550, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21268550, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
+      propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
