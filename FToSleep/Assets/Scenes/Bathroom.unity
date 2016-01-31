@@ -4205,7 +4205,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 412014, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.8614554
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 412014, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4230,35 +4230,6 @@ Prefab:
     - target: {fileID: 412014, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 21268550, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21268550, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
-      propertyPath: m_Color.g
-      value: 0.060121104
-      objectReference: {fileID: 0}
-    - target: {fileID: 21268550, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
-      propertyPath: m_Color.b
-      value: 0.060121104
-      objectReference: {fileID: 0}
-    - target: {fileID: 21268550, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300010, guid: 8fb98a6035269e64a998f9b56828fc4f,
-        type: 3}
-    - target: {fileID: 5028518, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028518, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028518, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
-      propertyPath: m_LinearDrag
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
