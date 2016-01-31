@@ -21,6 +21,8 @@ public class MetagameController : MonoBehaviour
 	public bool[] gamesPlayed = new bool[4];
 	public AudioClip startSoundEffect;
 	public AudioClip insanityFail;
+	private string nextSceneToLoad;
+	private Sprite nextSceneBackground;
 
 	private bool gameRunning = false;
 	private float deltaTime = 0.0f;
@@ -209,5 +211,33 @@ public class MetagameController : MonoBehaviour
 			instance.gamesPlayed [instance.lastPlayedGame] = false;
 			Debug.Log ("able to retry:" + instance.lastPlayedGame);
 		}
+	}
+
+	public static void SetNextSceneToLoad(string nextToScene){
+		if (IsActive ()) {
+			instance.nextSceneToLoad = nextToScene;
+		}
+	}
+
+	public static void SetNextSplashScreenBackground(Sprite splashBackground){
+		if (IsActive ()) {
+			instance.nextSceneBackground = splashBackground;
+		}
+	}
+
+	public static string GetNextSceneToLoad(){
+		if (IsActive ()) {
+			return instance.nextSceneToLoad;
+		}
+
+		return "";
+	}
+
+	public static Sprite GetNextSplashScreenBackground(){
+		if (IsActive ()) {
+			return instance.nextSceneBackground;
+		}
+
+		return null;
 	}
 }

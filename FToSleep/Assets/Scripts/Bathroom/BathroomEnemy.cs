@@ -7,10 +7,7 @@ using System.Collections.Generic;
 public class BathroomEnemy : MonoBehaviour
 {
 	private Knight2D mainPlayer;
-
-	protected void Awake ()
-	{
-	}
+	public AudioClip[] deathNoise;
 
 	protected void Start ()
 	{
@@ -45,10 +42,12 @@ public class BathroomEnemy : MonoBehaviour
 		Debug.Log ("Got hit by sword?");
 		if (otherObject.name == "Sword") {
 			Debug.Log ("Attack Trigger");
+			AudioClip clip = deathNoise[Random.Range (0, deathNoise.Length)];
+			AudioController.PlaySoundEffect(clip);
 			gameObject.SetActive (false);
 		}
 		if (otherObject.name == "AttackTrigger") {
-			Debug.Log ("Sword");
+			Debug.Log ("Sword1");
 			gameObject.SetActive (false);
 		}
 	}
