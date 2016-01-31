@@ -78,6 +78,10 @@ public class MetagameController : MonoBehaviour
 				//RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
 			}
 
+			if (gamesPlayed [1] == gamesPlayed [2] == gamesPlayed [3] == true && SceneManager.GetActiveScene().name.Contains("Main")) {
+				Debug.Break();
+			}
+
 			if (Input.GetButtonDown ("Cancel")) {
 				Debug.Log ("Escape!!!!!!!!");
 				EndGame ();
@@ -111,13 +115,13 @@ public class MetagameController : MonoBehaviour
 	public static void GoToMain ()
 	{
 		if (IsActive ()) {
-			Debug.Log ("GoToMain");
-
 			//to make sure we dont load into scenes that dont exist
-			string sceneToLoad = "Main" + ((GetInsanity () > 0 && GetInsanity () < 4) ? "" + GetInsanity () : "");
-			if (GetInsanity () >= 4) {
+			string sceneToLoad = "Main" + ((GetInsanity () > 0 && GetInsanity () < 3) ? "" + GetInsanity () : "");
+			if (GetInsanity () >= 3) {
 				sceneToLoad = "Start";
 			}
+
+			Debug.Log ("GoToMain:" + sceneToLoad);
 
 			SceneManager.LoadScene (sceneToLoad);
 		}
