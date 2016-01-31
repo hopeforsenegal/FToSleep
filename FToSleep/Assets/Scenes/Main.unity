@@ -418,6 +418,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 29483280}
   m_Mesh: {fileID: 4300000, guid: 358fc6ac66af13f43920f719224a86eb, type: 3}
+--- !u!1001 &43099791
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 477294, guid: 220a167a1c584420d8b0d0d7c3b88161, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477294, guid: 220a167a1c584420d8b0d0d7c3b88161, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477294, guid: 220a167a1c584420d8b0d0d7c3b88161, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 477294, guid: 220a167a1c584420d8b0d0d7c3b88161, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477294, guid: 220a167a1c584420d8b0d0d7c3b88161, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477294, guid: 220a167a1c584420d8b0d0d7c3b88161, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477294, guid: 220a167a1c584420d8b0d0d7c3b88161, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477294, guid: 220a167a1c584420d8b0d0d7c3b88161, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 220a167a1c584420d8b0d0d7c3b88161, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &46910289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3563,6 +3605,48 @@ Transform:
   - {fileID: 790166733}
   m_Father: {fileID: 569616091}
   m_RootOrder: 1
+--- !u!1001 &1056069399
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 473284, guid: 35a32a1b450814926954a0afd6f9051b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.3749771
+      objectReference: {fileID: 0}
+    - target: {fileID: 473284, guid: 35a32a1b450814926954a0afd6f9051b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -85.89996
+      objectReference: {fileID: 0}
+    - target: {fileID: 473284, guid: 35a32a1b450814926954a0afd6f9051b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 473284, guid: 35a32a1b450814926954a0afd6f9051b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473284, guid: 35a32a1b450814926954a0afd6f9051b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473284, guid: 35a32a1b450814926954a0afd6f9051b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 473284, guid: 35a32a1b450814926954a0afd6f9051b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 473284, guid: 35a32a1b450814926954a0afd6f9051b, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 35a32a1b450814926954a0afd6f9051b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1137101239
 GameObject:
   m_ObjectHideFlags: 0
@@ -4253,47 +4337,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1418549282}
   m_Mesh: {fileID: 4300000, guid: a2f042bdd87a5454ab0fb72fd39b33bf, type: 3}
---- !u!1 &1548723234
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 151280, guid: ea4cfe5d70fb20b48a62eb721bfab63b, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1548723235}
-  - 114: {fileID: 1548723236}
-  m_Layer: 0
-  m_Name: MetagameController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1548723235
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 477754, guid: ea4cfe5d70fb20b48a62eb721bfab63b, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1548723234}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3749771, y: -85.89996, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
---- !u!114 &1548723236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11449078, guid: ea4cfe5d70fb20b48a62eb721bfab63b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1548723234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76d2f77e90fb74a029ddf8e9c6f8d0c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endCountdownTime: 300
 --- !u!1 &1558969309
 GameObject:
   m_ObjectHideFlags: 0
@@ -4938,6 +4981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0daaf4d880f46e4397eac33cb14048b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_id: 2
   m_SceneToLoad: Bathroom
 --- !u!65 &1844263810
 BoxCollider:
@@ -5439,7 +5483,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!114 &2064809591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5578,6 +5622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0daaf4d880f46e4397eac33cb14048b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_id: 3
   m_SceneToLoad: Lullaby
 --- !u!65 &2111585275
 BoxCollider:
@@ -5662,6 +5707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0daaf4d880f46e4397eac33cb14048b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_id: 1
   m_SceneToLoad: Doors
 --- !u!65 &2131553860
 BoxCollider:

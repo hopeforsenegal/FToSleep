@@ -20,19 +20,23 @@ public class PlayerInteractionController : MonoBehaviour {
         }
     }
 
-    private void FireRayToInteractable() {
-        Transform cameraTransform = m_PlayerCamera.transform;
-        Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
-        RaycastHit hit;
-        bool hitInteractable = Physics.Raycast(ray, out hit, 10.0f, collisionMask);
+	private void FireRayToInteractable ()
+	{
+		Transform cameraTransform = m_PlayerCamera.transform;
+		Ray ray = new Ray (cameraTransform.position, cameraTransform.forward);
+		RaycastHit hit;
+		bool hitInteractable = Physics.Raycast (ray, out hit, 10.0f, collisionMask);
 
-        if (hitInteractable) {
-            Interactables interactable = hit.collider.GetComponentInParent<Interactables>();
-            AddSceneAdditive(interactable);
-        }
+		if (hitInteractable) {
+			Interactables interactable = hit.collider.GetComponentInParent<Interactables> ();
+			if (!MetagameController.HasPlayedGame (interactable.MiniGameId)) {
+				MetagameController.SetPlayedGame (interactable.MiniGameId);
+				AddSceneAdditive (interactable);
+			}
+		}
 
-        Debug.DrawRay(ray.origin, ray.direction*10, Color.red, 100.0f);
-    }
+		Debug.DrawRay (ray.origin, ray.direction * 10, Color.red, 100.0f);
+	}
 
     static void AddSceneAdditive(Interactables target) {
 		MetagameController.RecordPlayerPosition ();

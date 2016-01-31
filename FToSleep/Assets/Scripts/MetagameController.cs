@@ -18,6 +18,7 @@ public class MetagameController : MonoBehaviour
 
 	private TransformData playerTransformData;
 	private int insanity = 0;
+	private bool[] gamesPlayed = new bool[4];
 
 	private float deltaTime = 0.0f;
 	private float trackingTime = 0.0f;
@@ -88,6 +89,7 @@ public class MetagameController : MonoBehaviour
 	public void StartGame ()
 	{
 		Debug.Log ("Start Overall Game");
+		gamesPlayed = new bool[4];
 	}
 
 	public void EndGame ()
@@ -161,5 +163,20 @@ public class MetagameController : MonoBehaviour
 			Debug.Log ("RecordPlayerPosition");
 			instance.SavePlayerPosition ();
 		}
+	}
+
+	public static void SetPlayedGame (int game)
+	{
+		if (IsActive ()) {
+			instance.gamesPlayed [game] = true;
+		}
+	}
+
+	public static bool HasPlayedGame (int game)
+	{
+		if (IsActive ()) {
+			return instance.gamesPlayed [game];
+		}
+		return false;
 	}
 }
