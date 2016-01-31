@@ -118,7 +118,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -192,7 +192,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -265,8 +265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicAudioSource: {fileID: 8270298}
-  musicAudioSource2: {fileID: 8214602}
-  soundEffectAudioSource: {fileID: 8275080}
+  musicAudioSource2: {fileID: 8275080}
+  soundEffectAudioSource: {fileID: 8214602}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
