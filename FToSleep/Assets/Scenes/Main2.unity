@@ -1360,6 +1360,7 @@ MonoBehaviour:
   m_SceneToLoad: Lullaby
   m_PromptMessage: They can't stop what I started...
   m_PromptSound: {fileID: 8300000, guid: 1c00e4e83d1014cb7be81caa568860ea, type: 3}
+  m_SplashBackground: {fileID: 0}
 --- !u!65 &518994449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1415,7 +1416,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3f68bc44c96edca4d849ce7c3296637c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80d55ad130ac3b64881f72997bb8ee33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1856,6 +1857,7 @@ MonoBehaviour:
   m_SceneToLoad: Bathroom
   m_PromptMessage: I never feel good about them leaving
   m_PromptSound: {fileID: 8300000, guid: 85cf3a04e4fe448fca9de282ba0d6745, type: 3}
+  m_SplashBackground: {fileID: 0}
 --- !u!65 &640728758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7151,6 +7153,7 @@ MonoBehaviour:
   m_SceneToLoad: Doors
   m_PromptMessage: If they get in, they get INSIDE ME!
   m_PromptSound: {fileID: 8300000, guid: 308057ea721fa469db133b0a29d647f3, type: 3}
+  m_SplashBackground: {fileID: 0}
 --- !u!65 &2081653645
 BoxCollider:
   m_ObjectHideFlags: 0
