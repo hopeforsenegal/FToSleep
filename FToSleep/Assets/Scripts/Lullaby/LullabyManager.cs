@@ -124,6 +124,7 @@ public class LullabyManager : MonoBehaviour
 
 		matchStarted = false;
 
+		AudioController.StopAllSounds ();
 		DespawnSymbols ();
 		canvas.gameObject.SetActive (false);
 		MetagameController.GoToMain ();

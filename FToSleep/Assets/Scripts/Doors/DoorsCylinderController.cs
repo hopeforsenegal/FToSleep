@@ -4,6 +4,7 @@ using System.Collections;
 public class DoorsCylinderController : MonoBehaviour {
 
 	private DoorsCylinder _cylinder;
+	private DoorsCylinderSprite _cylinderSprite;
 	private DoorsPin[] _doorsPins;
 	private DoorsSlot[] _doorsSlots;
 	private bool _complete = false;
@@ -13,7 +14,7 @@ public class DoorsCylinderController : MonoBehaviour {
 		int doorsPinSortingOrder = sortingOrder * 3;
 		int doorsSlotSortingOrder = sortingOrder * 3 + 2;
 
-		_cylinder.SetSortingOrder (cylinderSortingOrder);
+		_cylinderSprite.SetSortingOrder (cylinderSortingOrder);
 		foreach (DoorsPin pin in _doorsPins) {
 			pin.SetSortingOrder (doorsPinSortingOrder);
 		}
@@ -29,6 +30,7 @@ public class DoorsCylinderController : MonoBehaviour {
 	void Awake () {
 		gameObject.SetActive (false);
 		_cylinder = GetComponentInChildren<DoorsCylinder>();
+		_cylinderSprite = GetComponentInChildren<DoorsCylinderSprite>();
 		_doorsPins = GetComponentsInChildren<DoorsPin>();
 		_doorsSlots = GetComponentsInChildren<DoorsSlot>();
 	}
@@ -36,7 +38,8 @@ public class DoorsCylinderController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!_complete) {
-			if (Input.GetKeyDown (KeyCode.LeftArrow) == true || Input.GetKeyDown (KeyCode.RightArrow) == true) {
+			if (Input.GetKeyDown (KeyCode.LeftArrow) == true || Input.GetKeyDown (KeyCode.RightArrow) == true ||
+				Input.GetKeyDown (KeyCode.A) == true || Input.GetKeyDown (KeyCode.D) == true) {
 				_cylinder.RotateCylinder ();
 			}
 			if (Input.GetKeyDown (KeyCode.Space) == true) {
@@ -49,7 +52,10 @@ public class DoorsCylinderController : MonoBehaviour {
 					}
 				}
 				if (_complete) {
+					DoorsManager.Instance.PlayLocked ();
 					Invoke ("Complete", 1);
+				} else {
+					DoorsManager.Instance.PlayBounce ();
 				}
 			}
 		}
