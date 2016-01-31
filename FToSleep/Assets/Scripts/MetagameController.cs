@@ -82,14 +82,14 @@ public class MetagameController : MonoBehaviour
 			}
 
 			if (gamesPlayed [1] == true && gamesPlayed [2] == true && true && gamesPlayed [3] == true && SceneManager.GetActiveScene().name.Contains("Main")) {
-
-				MetagameController.SetNextSplashScreenBackground (winSprite);
-				SceneManager.LoadScene ("SplashScreen");
+				WinGame ();
+				return;
 			}
 
 			if (Input.GetButtonDown ("Cancel")) {
 				Debug.Log ("Escape!!!!!!!!");
-				EndGame ();
+				LoseGame ();
+				return;
 			}
 
 			//RemainingTimeText.Show (true);
@@ -97,9 +97,8 @@ public class MetagameController : MonoBehaviour
 
 			// If the time has run down 
 			if (countDownEndSeconds <= 0) {
-				MetagameController.SetNextSplashScreenBackground (loseSprite);
-				SceneManager.LoadScene ("SplashScreen");
-				EndGame ();
+				LoseGame ();
+				return;
 			}
 		}
 	}
@@ -112,11 +111,22 @@ public class MetagameController : MonoBehaviour
 		gameRunning = true;
 	}
 
-	public void EndGame ()
+	public void LoseGame ()
 	{
 		gameRunning = false;
 		Debug.Log ("End Overall Game");
-		SceneManager.LoadScene ("Start");
+		MetagameController.SetNextSceneToLoad ("Start");
+		MetagameController.SetNextSplashScreenBackground (loseSprite);
+		SceneManager.LoadScene ("SplashScreen");
+	}
+
+	public void WinGame ()
+	{
+		gameRunning = false;
+		Debug.Log ("End Overall Game - Win");
+		MetagameController.SetNextSceneToLoad ("Start");
+		MetagameController.SetNextSplashScreenBackground (winSprite);
+		SceneManager.LoadScene ("SplashScreen");
 	}
 
 	public static void GoToMain ()
@@ -125,9 +135,8 @@ public class MetagameController : MonoBehaviour
 			//to make sure we dont load into scenes that dont exist
 			string sceneToLoad = "Main" + ((GetInsanity () > 0 && GetInsanity () < 3) ? "" + GetInsanity () : "");
 			if (GetInsanity () >= 3) {
-				sceneToLoad = "SplashScreen";
-				MetagameController.SetNextSceneToLoad ("Start");
-				MetagameController.SetNextSplashScreenBackground (instance.loseSprite);
+				instance.LoseGame ();
+				return;
 			}
 
 			Debug.Log ("GoToMain:" + sceneToLoad);
