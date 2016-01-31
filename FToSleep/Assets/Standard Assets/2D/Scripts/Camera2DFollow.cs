@@ -19,7 +19,8 @@ namespace UnityStandardAssets._2D
         // Use this for initialization
         private void Start()
         {
-            m_LastTargetPosition = target.position;
+			m_LastTargetPosition = target.position;
+			m_LastTargetPosition = Vector3.MoveTowards(m_LastTargetPosition, Vector3.down * 200, Time.deltaTime*lookAheadReturnSpeed);
             m_OffsetZ = (transform.position - target.position).z;
             transform.parent = null;
         }
@@ -44,6 +45,8 @@ namespace UnityStandardAssets._2D
 
             Vector3 aheadTargetPos = target.position + m_LookAheadPos + Vector3.forward*m_OffsetZ;
             Vector3 newPos = Vector3.SmoothDamp(transform.position, aheadTargetPos, ref m_CurrentVelocity, damping);
+
+			newPos.y = target.position.y + 2;
 
             transform.position = newPos;
 
