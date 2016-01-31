@@ -3868,6 +3868,7 @@ MonoBehaviour:
   - {fileID: 1546439632}
   - {fileID: 201240545}
   - {fileID: 1694900330}
+  locked: {fileID: 8300000, guid: c909b7562aa1d4eeb9887d8ad6ae94ce, type: 3}
 --- !u!4 &1316159929
 Transform:
   m_ObjectHideFlags: 0
