@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerInteractionController : MonoBehaviour {
     [SerializeField]
@@ -9,12 +10,18 @@ public class PlayerInteractionController : MonoBehaviour {
     [SerializeField]
     private LayerMask collisionMask;
 
-    public Transform ViewTarget;
+    public Animator m_PromptAnimator;
+
+    static Interactables CurrentTarget;
+
+    [SerializeField]
+    private Animator m_cachedFaderAnimator;
+
+    [SerializeField]
+    private Text m_promptText;
 
     void Update() {
         if ( Input.GetButtonDown("Fire1") ) {
-            //TODO: Draw a ray to the object and check collision. If the collision has a interactables target. 
-            //Load the scene associated with 
             FireRayToInteractable();
             Debug.Log("im firing my stuff");
         }
@@ -28,19 +35,38 @@ public class PlayerInteractionController : MonoBehaviour {
 		bool hitInteractable = Physics.Raycast (ray, out hit, 10.0f, collisionMask);
 
 		if (hitInteractable) {
-			Interactables interactable = hit.collider.GetComponentInParent<Interactables> ();
-			if (!MetagameController.HasPlayedGame (interactable.MiniGameId)) {
-				MetagameController.SetPlayedGame (interactable.MiniGameId);
-				AddSceneAdditive (interactable);
-			}
+			CurrentTarget = hit.collider.GetComponentInParent<Interactables> ();
+			if (!MetagameController.HasPlayedGame (CurrentTarget.MiniGameId)) {
+				MetagameController.SetPlayedGame (CurrentTarget.MiniGameId);
+                m_cachedFaderAnimator.SetBool("FadeOut", true);
+            }
 		}
-
-		Debug.DrawRay (ray.origin, ray.direction * 10, Color.red, 100.0f);
 	}
 
-    static void AddSceneAdditive(Interactables target) {
-		MetagameController.RecordPlayerPosition ();
-        SceneManager.LoadScene(target.MiniGameName);
+    public static void AddSceneAdditive() {
+        if (CurrentTarget != null) {
+            MetagameController.RecordPlayerPosition();
+            string scene = CurrentTarget.MiniGameName;
+            CurrentTarget = null;
+            SceneManager.LoadScene(scene);
+        }
     }
+
+    void OnTriggerEnter(Collider coll) {
+        if ( coll.tag == "Interactables") {
+            Interactables interact = coll.GetComponentInChildren<Interactables>();
+            m_promptText.text = interact.PromptMessage;
+            m_PromptAnimator.SetBool("HasPrompt", true);
+        }
+    }
+
+    void OnTriggerExit(Collider coll) {
+        if (coll.tag == "Interactables") {
+            Interactables interact = coll.GetComponentInChildren<Interactables>();
+            m_promptText.text = "";
+            m_PromptAnimator.SetBool("HasPrompt", false);
+        }
+    }
+
 
 }
