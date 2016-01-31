@@ -16,7 +16,7 @@ public class MetagameController : MonoBehaviour
 
 	private static MetagameController instance;
 
-	private Transform playerTransform;
+	private TransformData playerTransformData;
 	private int insanity = 0;
 
 	private float deltaTime = 0.0f;
@@ -35,11 +35,19 @@ public class MetagameController : MonoBehaviour
 
 		DontDestroyOnLoad (gameObject);
 
+		SavePlayerPosition ();
+	}
+
+	private void SavePlayerPosition ()
+	{
 		GameObject tempObject;
 		tempObject = GameObject.Find ("Player");
 		if (tempObject != null) {
-			playerTransform = tempObject.GetComponent<Transform> ();
+			playerTransformData = tempObject.transform.Clone ();
 			tempObject = null;
+			Debug.Log ("SetPlayerPosition x:" + playerTransformData.position.x + " y:" + playerTransformData.position.y);
+		} else {
+			Debug.LogWarning ("NOT HERE!");
 		}
 	}
 
@@ -48,6 +56,7 @@ public class MetagameController : MonoBehaviour
 		trackingTime = Time.time;
 		deltaTime = Time.time;
 
+		PositionYourPlayer ();
 		RestartCountdown ();
 		StartGame ();
 	}
@@ -62,7 +71,7 @@ public class MetagameController : MonoBehaviour
 			//RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
 		}
 
-		if ( Input.GetButtonDown("Cancel") ) {
+		if (Input.GetButtonDown ("Cancel")) {
 			Debug.Log ("Escape!!!!!!!!");
 			EndGame ();
 		}
@@ -84,7 +93,15 @@ public class MetagameController : MonoBehaviour
 	public void EndGame ()
 	{
 		Debug.Log ("End Overall Game");
-		SceneManager.LoadScene("Start");
+		SceneManager.LoadScene ("Start");
+	}
+
+	public static void GoToMain ()
+	{
+		if (IsActive ()) {
+			Debug.Log ("GoToMain");
+			SceneManager.LoadScene ("Main");
+		}
 	}
 
 	public static bool IsActive ()
@@ -98,7 +115,8 @@ public class MetagameController : MonoBehaviour
 		//RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
 	}
 
-	public static int GetInsanity(){
+	public static int GetInsanity ()
+	{
 		if (IsActive ()) {
 			Debug.Log ("GetInsanity:" + instance.insanity);
 			return instance.insanity;
@@ -106,10 +124,35 @@ public class MetagameController : MonoBehaviour
 		return 0;
 	}
 
-	public static void IncreaseInsanity(){
+	public static void IncreaseInsanity ()
+	{
 		if (IsActive ()) {
 			Debug.Log ("IncreaseInsanity:" + instance.insanity);
 			instance.insanity++;
+		}
+	}
+
+	public static void PositionYourPlayer ()
+	{
+		if (IsActive ()) {
+			Debug.Log ("PositionYourPlayer");
+
+			GameObject tempObject;
+			tempObject = GameObject.Find ("Player");
+			if (tempObject != null) {
+				Transform transform = tempObject.GetComponent<Transform> ();
+				transform.position = instance.playerTransformData.position;
+				transform.rotation = instance.playerTransformData.rotation;
+				Debug.Log ("PositionYourPlayer x:" + transform.position.x + " y:" + transform.position.y);
+			}
+		}
+	}
+
+	public static void RecordPlayerPosition ()
+	{
+		if (IsActive ()) {
+			Debug.Log ("RecordPlayerPosition");
+			instance.SavePlayerPosition ();
 		}
 	}
 }

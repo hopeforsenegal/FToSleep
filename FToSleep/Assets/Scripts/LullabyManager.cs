@@ -120,6 +120,7 @@ public class LullabyManager : MonoBehaviour
 
 		DespawnSymbols ();
 		canvas.gameObject.SetActive (false);
+		MetagameController.GoToMain ();
 	}
 
 	private void SpawnNewSheep ()
