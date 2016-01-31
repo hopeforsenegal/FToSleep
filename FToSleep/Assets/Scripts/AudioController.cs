@@ -74,4 +74,12 @@ public class AudioController : MonoBehaviour
 			instance.soundEffectAudioSource.Play ();
 		}
 	}
+
+	public static void StopAllSounds(){
+		if (instance) {
+			instance.musicAudioSource.Stop ();
+			instance.musicAudioSource2.Stop ();
+			instance.soundEffectAudioSource.Stop ();
+		}
+	}
 }

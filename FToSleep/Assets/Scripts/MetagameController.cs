@@ -19,7 +19,10 @@ public class MetagameController : MonoBehaviour
 	private TransformData playerTransformData;
 	private int insanity = 0;
 	private bool[] gamesPlayed = new bool[4];
+	public AudioClip startSoundEffect;
+	public AudioClip insanityFail;
 
+	private bool gameRunning = false;
 	private float deltaTime = 0.0f;
 	private float trackingTime = 0.0f;
 	private int countDownEndSeconds = 0;
@@ -64,36 +67,41 @@ public class MetagameController : MonoBehaviour
 
 	protected void Update ()
 	{
-		// Change the remaining time
-		if (Time.time - deltaTime >= 1.0f) {
-			deltaTime = Time.time;
+		if (gameRunning) {
+			// Change the remaining time
+			if (Time.time - deltaTime >= 1.0f) {
+				deltaTime = Time.time;
 
-			countDownEndSeconds--;
-			//RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
-		}
+				countDownEndSeconds--;
+				//RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
+			}
 
-		if (Input.GetButtonDown ("Cancel")) {
-			Debug.Log ("Escape!!!!!!!!");
-			EndGame ();
-		}
+			if (Input.GetButtonDown ("Cancel")) {
+				Debug.Log ("Escape!!!!!!!!");
+				EndGame ();
+			}
 
-		//RemainingTimeText.Show (true);
-		trackingTime += Time.deltaTime;
+			//RemainingTimeText.Show (true);
+			trackingTime += Time.deltaTime;
 
-		// If the time has run down 
-		if (countDownEndSeconds <= 0) {
-			EndGame ();
+			// If the time has run down 
+			if (countDownEndSeconds <= 0) {
+				EndGame ();
+			}
 		}
 	}
 
 	public void StartGame ()
 	{
 		Debug.Log ("Start Overall Game");
+		AudioController.PlaySoundEffect (startSoundEffect);
 		gamesPlayed = new bool[4];
+		gameRunning = true;
 	}
 
 	public void EndGame ()
 	{
+		gameRunning = false;
 		Debug.Log ("End Overall Game");
 		SceneManager.LoadScene ("Start");
 	}
@@ -138,6 +146,12 @@ public class MetagameController : MonoBehaviour
 		if (IsActive ()) {
 			Debug.Log ("IncreaseInsanity:" + instance.insanity);
 			instance.insanity++;
+		}
+	}
+
+	public static void PlayInsanitySound(){
+		if (IsActive ()) {
+			AudioController.PlaySoundEffect (instance.insanityFail);
 		}
 	}
 

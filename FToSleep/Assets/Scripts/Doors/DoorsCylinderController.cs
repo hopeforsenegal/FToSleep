@@ -52,7 +52,10 @@ public class DoorsCylinderController : MonoBehaviour {
 					}
 				}
 				if (_complete) {
+					DoorsManager.Instance.PlayLocked ();
 					Invoke ("Complete", 1);
+				} else {
+					DoorsManager.Instance.PlayBounce ();
 				}
 			}
 		}

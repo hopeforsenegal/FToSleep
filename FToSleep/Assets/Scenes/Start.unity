@@ -154,8 +154,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 777879117}
+  - 114: {fileID: 777879118}
   m_Layer: 0
-  m_Name: Transition
+  m_Name: DestroyOldGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,6 +174,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &777879118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777879116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b598e0e9988d46a98db9bf8b9a2bb47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1053555726
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

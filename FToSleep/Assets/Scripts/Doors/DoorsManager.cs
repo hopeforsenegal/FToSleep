@@ -22,6 +22,10 @@ public class DoorsManager : MonoBehaviour {
 	public DoorsCylinderController[] cylinderControllers;
 	private int _currentCylinderIndex = 0;
 
+	public AudioClip locked;
+	public AudioClip bounce;
+	public AudioClip nextCylinder;
+
 	protected void Awake ()
 	{
 		if (instance == null) {
@@ -85,6 +89,7 @@ public class DoorsManager : MonoBehaviour {
 
 		matchStarted = false;
 
+		AudioController.StopAllSounds ();
 		MetagameController.GoToMain ();
 	}
 
@@ -93,6 +98,7 @@ public class DoorsManager : MonoBehaviour {
 		if (_currentCylinderIndex == cylinderControllers.Length) {
 			EndGame ();
 		} else {
+			AudioController.PlaySoundEffect (nextCylinder);
 			cylinderControllers [_currentCylinderIndex].StartCylinderPuzzle ();
 		}
 	}
@@ -102,4 +108,17 @@ public class DoorsManager : MonoBehaviour {
 		countDownEndSeconds = endCountdownTime;
 		RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
 	}
+
+	public void PlayLocked () {
+		if (locked) {
+			AudioController.PlaySoundEffect (locked);
+		}
+	}
+
+	public void PlayBounce () {
+		if (bounce) {
+			AudioController.PlaySoundEffect (bounce);
+		}
+	}
+
 }

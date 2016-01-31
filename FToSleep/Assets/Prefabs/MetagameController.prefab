@@ -39,6 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d2f77e90fb74a029ddf8e9c6f8d0c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSoundEffect: {fileID: 8300000, guid: 583b944e2a4174ea49a588b264c0c894, type: 3}
+  insanityFail: {fileID: 8300000, guid: 8df1c57aedfa34d0a8bf85c463e73db7, type: 3}
   endCountdownTime: 300
 --- !u!1001 &100100000
 Prefab:
