@@ -905,6 +905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b6b2dea4e234c298f6d70ad8f668af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ambienceMusic: {fileID: 8300000, guid: 402d50c9267524117a04705b449207be, type: 3}
   endCountdownTime: 60
   matchStarted: 0
   startGameOnLaunch: 1

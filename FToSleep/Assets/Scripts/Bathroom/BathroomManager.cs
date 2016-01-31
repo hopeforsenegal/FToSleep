@@ -17,6 +17,7 @@ public class BathroomManager : MonoBehaviour
 	private float deltaTime = 0.0f;
 	private float trackingTime = 0.0f;
 	private int countDownEndSeconds = 0;
+	public AudioClip ambienceMusic;
 	public int endCountdownTime = 60;
 	public bool matchStarted;
 	public bool startGameOnLaunch;
@@ -65,6 +66,7 @@ public class BathroomManager : MonoBehaviour
 		Debug.Log ("Start Bathroom Game");
 
 		matchStarted = true;
+		AudioController.PlayMusic (ambienceMusic);
 	}
 
 	public bool IsMatchStarted ()
@@ -86,6 +88,7 @@ public class BathroomManager : MonoBehaviour
 
 
 		MetagameController.IncreaseInsanity();
+		MetagameController.AbleToRetryPlayedGame ();
 	}
 
 	public void RestartCountdown ()

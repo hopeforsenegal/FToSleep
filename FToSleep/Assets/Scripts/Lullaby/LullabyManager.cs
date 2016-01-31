@@ -91,6 +91,7 @@ public class LullabyManager : MonoBehaviour
 
 			if (numberOfMisses >= 3) {
 				MetagameController.IncreaseInsanity ();
+				MetagameController.AbleToRetryPlayedGame ();
 				EndGame ();
 				return;
 			}

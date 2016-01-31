@@ -18,6 +18,7 @@ public class MetagameController : MonoBehaviour
 
 	private TransformData playerTransformData;
 	private int insanity = 0;
+	private int numberOfLoses = 0;
 	private bool[] gamesPlayed = new bool[4];
 	public AudioClip startSoundEffect;
 	public AudioClip insanityFail;
@@ -26,6 +27,7 @@ public class MetagameController : MonoBehaviour
 	private float deltaTime = 0.0f;
 	private float trackingTime = 0.0f;
 	private int countDownEndSeconds = 0;
+	private int lastPlayedGame;
 	public int endCountdownTime = 300;
 
 	protected void Awake ()
@@ -149,7 +151,8 @@ public class MetagameController : MonoBehaviour
 		}
 	}
 
-	public static void PlayInsanitySound(){
+	public static void PlayInsanitySound ()
+	{
 		if (IsActive ()) {
 			AudioController.PlaySoundEffect (instance.insanityFail);
 		}
@@ -183,6 +186,7 @@ public class MetagameController : MonoBehaviour
 	{
 		if (IsActive ()) {
 			instance.gamesPlayed [game] = true;
+			instance.lastPlayedGame = game;
 		}
 	}
 
@@ -192,5 +196,12 @@ public class MetagameController : MonoBehaviour
 			return instance.gamesPlayed [game];
 		}
 		return false;
+	}
+
+	public static void AbleToRetryPlayedGame ()
+	{
+		if (IsActive ()) {
+			instance.gamesPlayed [instance.lastPlayedGame] = false;
+		}
 	}
 }

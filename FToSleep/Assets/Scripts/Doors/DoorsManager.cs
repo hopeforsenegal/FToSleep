@@ -61,6 +61,7 @@ public class DoorsManager : MonoBehaviour {
 			// If the time has run down 
 			if (countDownEndSeconds <= 0) {
 				MetagameController.IncreaseInsanity ();
+				MetagameController.AbleToRetryPlayedGame ();
 				EndGame ();
 			}
 		}
