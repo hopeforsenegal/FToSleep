@@ -23,6 +23,8 @@ public class MetagameController : MonoBehaviour
 	public AudioClip insanityFail;
 	private string nextSceneToLoad;
 	private Sprite nextSceneBackground;
+	public Sprite winSprite;
+	public Sprite loseSprite;
 
 	private bool gameRunning = false;
 	private float deltaTime = 0.0f;
@@ -80,8 +82,9 @@ public class MetagameController : MonoBehaviour
 			}
 
 			if (gamesPlayed [1] == true && gamesPlayed [2] == true && true && gamesPlayed [3] == true && SceneManager.GetActiveScene().name.Contains("Main")) {
-				
-				Debug.Break();
+
+				MetagameController.SetNextSplashScreenBackground (winSprite);
+				SceneManager.LoadScene ("SplashScreen");
 			}
 
 			if (Input.GetButtonDown ("Cancel")) {
@@ -94,6 +97,8 @@ public class MetagameController : MonoBehaviour
 
 			// If the time has run down 
 			if (countDownEndSeconds <= 0) {
+				MetagameController.SetNextSplashScreenBackground (loseSprite);
+				SceneManager.LoadScene ("SplashScreen");
 				EndGame ();
 			}
 		}
@@ -120,7 +125,9 @@ public class MetagameController : MonoBehaviour
 			//to make sure we dont load into scenes that dont exist
 			string sceneToLoad = "Main" + ((GetInsanity () > 0 && GetInsanity () < 3) ? "" + GetInsanity () : "");
 			if (GetInsanity () >= 3) {
-				sceneToLoad = "Start";
+				sceneToLoad = "SplashScreen";
+				MetagameController.SetNextSceneToLoad ("Start");
+				MetagameController.SetNextSplashScreenBackground (instance.loseSprite);
 			}
 
 			Debug.Log ("GoToMain:" + sceneToLoad);
