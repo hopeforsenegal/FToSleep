@@ -8,7 +8,6 @@ namespace UnityStandardAssets._2D
     public class Platformer2DUserControl : MonoBehaviour
     {
         private PlatformerCharacter2D m_Character;
-        private bool m_Jump;
 
 
         private void Awake()
@@ -19,22 +18,22 @@ namespace UnityStandardAssets._2D
 
         private void Update()
         {
-            if (!m_Jump)
-            {
-                // Read the jump input in Update so button presses aren't missed.
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-            }
+           
         }
 
 
         private void FixedUpdate()
         {
             // Read the inputs.
-            bool crouch = Input.GetKey(KeyCode.LeftControl);
-            float h = CrossPlatformInputManager.GetAxis("Horizontal");
+            bool attack = CrossPlatformInputManager.GetButtonDown("Fire1");
+             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             // Pass all parameters to the character control script.
-            m_Character.Move(h, crouch, m_Jump);
-            m_Jump = false;
+            m_Character.Move(h, false, false);
+
+            if(attack)
+            {
+                m_Character.Attack();
+            }
         }
     }
 }
