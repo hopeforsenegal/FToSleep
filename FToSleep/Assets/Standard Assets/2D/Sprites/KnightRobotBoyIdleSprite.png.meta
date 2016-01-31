@@ -1,0 +1,694 @@
+fileFormatVersion: 2
+guid: 99af1f72535d14fa5bcafeb1e52a9e80
+timeCreated: 1454265402
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: KnightRobotBoyIdleSprite_0
+    21300002: KnightRobotBoyIdleSprite_1
+    21300004: KnightRobotBoyIdleSprite_2
+    21300006: KnightRobotBoyIdleSprite_3
+    21300008: KnightRobotBoyIdleSprite_4
+    21300010: KnightRobotBoyIdleSprite_5
+    21300012: KnightRobotBoyIdleSprite_6
+    21300014: KnightRobotBoyIdleSprite_7
+    21300016: KnightRobotBoyIdleSprite_8
+    21300018: KnightRobotBoyIdleSprite_9
+    21300020: KnightRobotBoyIdleSprite_10
+    21300022: KnightRobotBoyIdleSprite_11
+    21300024: KnightRobotBoyIdleSprite_12
+    21300026: KnightRobotBoyIdleSprite_13
+    21300028: KnightRobotBoyIdleSprite_14
+    21300030: KnightRobotBoyIdleSprite_15
+    21300032: KnightRobotBoyIdleSprite_16
+    21300034: KnightRobotBoyIdleSprite_17
+    21300036: KnightRobotBoyIdleSprite_18
+    21300038: KnightRobotBoyIdleSprite_19
+    21300040: KnightRobotBoyIdleSprite_20
+    21300042: KnightRobotBoyIdleSprite_21
+    21300044: KnightRobotBoyIdleSprite_22
+    21300046: KnightRobotBoyIdleSprite_23
+    21300048: KnightRobotBoyIdleSprite_24
+    21300050: KnightRobotBoyIdleSprite_25
+    21300052: KnightRobotBoyIdleSprite_26
+    21300054: KnightRobotBoyIdleSprite_27
+    21300056: KnightRobotBoyIdleSprite_28
+    21300058: KnightRobotBoyIdleSprite_29
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 172
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: KnightRobotBoyIdleSprite_0
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1737
+        width: 101
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36.5, y: 141.5}
+        - {x: -12.5, y: 141.5}
+        - {x: -46.5, y: 128.5}
+        - {x: -50.5, y: 118.5}
+        - {x: -50.5, y: -119.5}
+        - {x: -35.5, y: -141.5}
+        - {x: 16.5, y: -141.5}
+        - {x: 18.5, y: -140.5}
+        - {x: 50.5, y: -1.5}
+        - {x: 50.5, y: 124.5}
+    - name: KnightRobotBoyIdleSprite_1
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1737
+        width: 101
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50.5, y: 142}
+        - {x: -50.5, y: -142}
+        - {x: 23.5, y: -142}
+        - {x: 50.5, y: -56}
+        - {x: 50.5, y: 142}
+    - name: KnightRobotBoyIdleSprite_2
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1736
+        width: 102
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -51, y: 142}
+        - {x: -51, y: -142}
+        - {x: 42, y: -142}
+        - {x: 51, y: -86}
+        - {x: 51, y: 142}
+    - name: KnightRobotBoyIdleSprite_3
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1736
+        width: 101
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.5, y: 141}
+        - {x: 48.5, y: 142}
+        - {x: -50.5, y: 142}
+        - {x: -50.5, y: -111}
+        - {x: -33.5, y: -142}
+        - {x: 16.5, y: -142}
+        - {x: 18.5, y: -140}
+        - {x: 33.5, y: -121}
+        - {x: 50.5, y: -18}
+    - name: KnightRobotBoyIdleSprite_4
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 1737
+        width: 104
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 141.5}
+        - {x: -44, y: 125.5}
+        - {x: -52, y: 118.5}
+        - {x: -52, y: -106.5}
+        - {x: -49, y: -141.5}
+        - {x: 28, y: -141.5}
+        - {x: 52, y: -63.5}
+        - {x: 52, y: 125.5}
+        - {x: 44, y: 141.5}
+    - name: KnightRobotBoyIdleSprite_5
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 1737
+        width: 104
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52, y: 127.5}
+        - {x: 40, y: 141.5}
+        - {x: -49, y: 141.5}
+        - {x: -52, y: 131.5}
+        - {x: -52, y: -91.5}
+        - {x: -37, y: -129.5}
+        - {x: -31, y: -141.5}
+        - {x: 18, y: -141.5}
+        - {x: 19, y: -140.5}
+        - {x: 15, y: -129.5}
+        - {x: 52, y: 11.5}
+    - name: KnightRobotBoyIdleSprite_6
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1736
+        width: 104
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 142}
+        - {x: -45, y: 126}
+        - {x: -52, y: 114}
+        - {x: -52, y: -120}
+        - {x: -49, y: -142}
+        - {x: 28, y: -142}
+        - {x: 52, y: -12}
+        - {x: 52, y: 129}
+        - {x: 40, y: 142}
+    - name: KnightRobotBoyIdleSprite_7
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1435
+        width: 101
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.5, y: 129.5}
+        - {x: 39.5, y: 140.5}
+        - {x: -20.5, y: 140.5}
+        - {x: -50.5, y: 131.5}
+        - {x: -50.5, y: -92.5}
+        - {x: -41.5, y: -138.5}
+        - {x: -33.5, y: -140.5}
+        - {x: 13.5, y: -140.5}
+        - {x: 15.5, y: -139.5}
+        - {x: 11.5, y: -128.5}
+        - {x: 50.5, y: 16.5}
+    - name: KnightRobotBoyIdleSprite_8
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1435
+        width: 101
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50.5, y: 141}
+        - {x: -50.5, y: -141}
+        - {x: 16.5, y: -141}
+        - {x: 18.5, y: -140}
+        - {x: 50.5, y: -96}
+        - {x: 50.5, y: 141}
+    - name: KnightRobotBoyIdleSprite_9
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1435
+        width: 104
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15, y: 142.5}
+        - {x: -48, y: 130.5}
+        - {x: -52, y: 122.5}
+        - {x: -52, y: -127.5}
+        - {x: -45, y: -142.5}
+        - {x: 36, y: -142.5}
+        - {x: 52, y: 25.5}
+        - {x: 52, y: 139.5}
+        - {x: 47, y: 142.5}
+    - name: KnightRobotBoyIdleSprite_10
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 1435
+        width: 101
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.5, y: -36.5}
+        - {x: 50.5, y: 141.5}
+        - {x: -12.5, y: 141.5}
+        - {x: -46.5, y: 128.5}
+        - {x: -50.5, y: 122.5}
+        - {x: -50.5, y: -110.5}
+        - {x: -47.5, y: -141.5}
+        - {x: 14.5, y: -141.5}
+        - {x: 15.5, y: -140.5}
+        - {x: 11.5, y: -129.5}
+        - {x: 48.5, y: -48.5}
+    - name: KnightRobotBoyIdleSprite_11
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 1435
+        width: 101
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.5, y: -10}
+        - {x: 50.5, y: 124}
+        - {x: 36.5, y: 141}
+        - {x: -12.5, y: 141}
+        - {x: -46.5, y: 128}
+        - {x: -50.5, y: 122}
+        - {x: -50.5, y: -141}
+        - {x: 18.5, y: -141}
+        - {x: 18.5, y: -140}
+        - {x: 14.5, y: -129}
+        - {x: 9.5, y: -128}
+    - name: KnightRobotBoyIdleSprite_12
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 1435
+        width: 101
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.5, y: 141.5}
+        - {x: -50.5, y: 137.5}
+        - {x: -50.5, y: -61.5}
+        - {x: -36.5, y: -137.5}
+        - {x: -31.5, y: -141.5}
+        - {x: 29.5, y: -141.5}
+        - {x: 50.5, y: -56.5}
+        - {x: 50.5, y: 139.5}
+        - {x: 49.5, y: 141.5}
+    - name: KnightRobotBoyIdleSprite_13
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1435
+        width: 102
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 43, y: 142.5}
+        - {x: -21, y: 142.5}
+        - {x: -45, y: 126.5}
+        - {x: -51, y: 111.5}
+        - {x: -51, y: -64.5}
+        - {x: -42, y: -140.5}
+        - {x: -39, y: -142.5}
+        - {x: 18, y: -142.5}
+        - {x: 19, y: -141.5}
+        - {x: 51, y: -7.5}
+        - {x: 51, y: 132.5}
+    - name: KnightRobotBoyIdleSprite_14
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1133
+        width: 102
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51, y: -24.5}
+        - {x: 51, y: 132.5}
+        - {x: 43, y: 143.5}
+        - {x: -18, y: 143.5}
+        - {x: -51, y: 120.5}
+        - {x: -51, y: -5.5}
+        - {x: -45, y: -38.5}
+        - {x: -31, y: -143.5}
+        - {x: 20, y: -143.5}
+        - {x: 21, y: -142.5}
+        - {x: 17, y: -131.5}
+        - {x: 48, y: -38.5}
+    - name: KnightRobotBoyIdleSprite_15
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1133
+        width: 101
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -39.5, y: 141.5}
+        - {x: -50.5, y: 113.5}
+        - {x: -50.5, y: -70.5}
+        - {x: -35.5, y: -141.5}
+        - {x: 20.5, y: -141.5}
+        - {x: 44.5, y: -52.5}
+        - {x: 50.5, y: -23.5}
+        - {x: 50.5, y: 141.5}
+    - name: KnightRobotBoyIdleSprite_16
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1132
+        width: 102
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43, y: 144}
+        - {x: -51, y: 131}
+        - {x: -51, y: -122}
+        - {x: -48, y: -144}
+        - {x: 25, y: -144}
+        - {x: 51, y: -55}
+        - {x: 51, y: 144}
+    - name: KnightRobotBoyIdleSprite_17
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1132
+        width: 102
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 142}
+        - {x: -51, y: 127}
+        - {x: -51, y: -137}
+        - {x: -50, y: -142}
+        - {x: 30, y: -142}
+        - {x: 51, y: -66}
+        - {x: 51, y: 142}
+    - name: KnightRobotBoyIdleSprite_18
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 1132
+        width: 101
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.5, y: 125}
+        - {x: 36.5, y: 142}
+        - {x: -12.5, y: 142}
+        - {x: -46.5, y: 129}
+        - {x: -50.5, y: 115}
+        - {x: -50.5, y: -100}
+        - {x: -47.5, y: -142}
+        - {x: 17.5, y: -142}
+        - {x: 18.5, y: -140}
+        - {x: 15.5, y: -129}
+        - {x: 50.5, y: 9}
+    - name: KnightRobotBoyIdleSprite_19
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 1132
+        width: 102
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51, y: 135.5}
+        - {x: 49, y: 142.5}
+        - {x: -23, y: 142.5}
+        - {x: -30, y: 140.5}
+        - {x: -51, y: 122.5}
+        - {x: -51, y: -83.5}
+        - {x: -45, y: -142.5}
+        - {x: 18, y: -142.5}
+        - {x: 20, y: -140.5}
+        - {x: 17, y: -129.5}
+        - {x: 51, y: -3.5}
+    - name: KnightRobotBoyIdleSprite_20
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1132
+        width: 101
+        height: 286
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 143}
+        - {x: -50.5, y: 127}
+        - {x: -50.5, y: -127}
+        - {x: -47.5, y: -143}
+        - {x: 19.5, y: -143}
+        - {x: 32.5, y: -111}
+        - {x: 50.5, y: -39}
+        - {x: 50.5, y: 143}
+    - name: KnightRobotBoyIdleSprite_21
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 831
+        width: 102
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7, y: -22.5}
+        - {x: 47, y: -37.5}
+        - {x: 51, y: -21.5}
+        - {x: 51, y: 142.5}
+        - {x: -27, y: 142.5}
+        - {x: -51, y: 129.5}
+        - {x: -51, y: -53.5}
+        - {x: -43, y: -92.5}
+        - {x: -31, y: -142.5}
+        - {x: 20, y: -142.5}
+        - {x: 21, y: -141.5}
+        - {x: 17, y: -130.5}
+        - {x: 9, y: -30.5}
+    - name: KnightRobotBoyIdleSprite_22
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 831
+        width: 104
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: -26.5}
+        - {x: 29, y: -24.5}
+        - {x: 52, y: -17.5}
+        - {x: 52, y: 142.5}
+        - {x: -52, y: 142.5}
+        - {x: -52, y: -142.5}
+        - {x: 19, y: -142.5}
+        - {x: 19, y: -141.5}
+        - {x: 15, y: -130.5}
+        - {x: 7, y: -33.5}
+    - name: KnightRobotBoyIdleSprite_23
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 831
+        width: 104
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 142.5}
+        - {x: -52, y: 118.5}
+        - {x: -52, y: -50.5}
+        - {x: -40, y: -140.5}
+        - {x: -31, y: -142.5}
+        - {x: 21, y: -142.5}
+        - {x: 34, y: -110.5}
+        - {x: 52, y: -23.5}
+        - {x: 52, y: 142.5}
+    - name: KnightRobotBoyIdleSprite_24
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 831
+        width: 101
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: 141.5}
+        - {x: -12.5, y: 141.5}
+        - {x: -46.5, y: 128.5}
+        - {x: -50.5, y: 102.5}
+        - {x: -50.5, y: -79.5}
+        - {x: -43.5, y: -141.5}
+        - {x: 21.5, y: -141.5}
+        - {x: 14.5, y: -129.5}
+        - {x: 50.5, y: 14.5}
+        - {x: 50.5, y: 130.5}
+    - name: KnightRobotBoyIdleSprite_25
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 831
+        width: 101
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 50.5, y: 128.5}
+        - {x: 35.5, y: 141.5}
+        - {x: -6.5, y: 141.5}
+        - {x: -14.5, y: 140.5}
+        - {x: -44.5, y: 127.5}
+        - {x: -50.5, y: 108.5}
+        - {x: -50.5, y: -49.5}
+        - {x: -46.5, y: -85.5}
+        - {x: -33.5, y: -136.5}
+        - {x: -28.5, y: -140.5}
+        - {x: -23.5, y: -141.5}
+        - {x: 17.5, y: -141.5}
+        - {x: 18.5, y: -140.5}
+        - {x: 14.5, y: -129.5}
+        - {x: 50.5, y: 12.5}
+    - name: KnightRobotBoyIdleSprite_26
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 831
+        width: 101
+        height: 283
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12.5, y: 141.5}
+        - {x: -46.5, y: 128.5}
+        - {x: -50.5, y: 121.5}
+        - {x: -50.5, y: -94.5}
+        - {x: -46.5, y: -141.5}
+        - {x: 35.5, y: -141.5}
+        - {x: 50.5, y: -47.5}
+        - {x: 50.5, y: 141.5}
+    - name: KnightRobotBoyIdleSprite_27
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 831
+        width: 104
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: 142.5}
+        - {x: -52, y: 142.5}
+        - {x: -52, y: -142.5}
+        - {x: 18, y: -142.5}
+        - {x: 18, y: -141.5}
+        - {x: 52, y: -45.5}
+        - {x: 52, y: 128.5}
+    - name: KnightRobotBoyIdleSprite_28
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 535
+        width: 104
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45, y: 142.5}
+        - {x: -52, y: 136.5}
+        - {x: -52, y: -78.5}
+        - {x: -42, y: -132.5}
+        - {x: -34, y: -142.5}
+        - {x: 31, y: -142.5}
+        - {x: 52, y: -82.5}
+        - {x: 52, y: 142.5}
+    - name: KnightRobotBoyIdleSprite_29
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 535
+        width: 101
+        height: 285
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 142.5}
+        - {x: -50.5, y: 126.5}
+        - {x: -50.5, y: -106.5}
+        - {x: -45.5, y: -142.5}
+        - {x: 32.5, y: -142.5}
+        - {x: 50.5, y: -42.5}
+        - {x: 50.5, y: 142.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
