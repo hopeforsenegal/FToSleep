@@ -100,7 +100,7 @@ public class MetagameController : MonoBehaviour
 	{
 		if (IsActive ()) {
 			Debug.Log ("GoToMain");
-			SceneManager.LoadScene ("Main");
+			SceneManager.LoadScene ("Main"+ ((GetInsanity() > 0 && GetInsanity() < 4) ? "" +GetInsanity() : "")); //to make sure we dont load into scenes that dont exist
 		}
 	}
 
