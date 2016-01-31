@@ -20,6 +20,8 @@ public class PlayerInteractionController : MonoBehaviour {
     [SerializeField]
     private Text m_promptText;
 
+	private string lastPromptPlayed;
+
     void Update() {
         if ( Input.GetButtonDown("Fire1") ) {
             FireRayToInteractable();
@@ -57,6 +59,11 @@ public class PlayerInteractionController : MonoBehaviour {
             Interactables interact = coll.GetComponentInChildren<Interactables>();
             m_promptText.text = interact.PromptMessage;
             m_PromptAnimator.SetBool("HasPrompt", true);
+
+			if (lastPromptPlayed != interact.MiniGameName) {
+				AudioController.PlaySoundEffect (interact.PromptSound);
+				lastPromptPlayed = interact.MiniGameName;
+			}
         }
     }
 
