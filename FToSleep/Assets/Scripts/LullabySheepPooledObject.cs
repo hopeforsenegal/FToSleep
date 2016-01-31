@@ -12,12 +12,12 @@ public class LullabySheepPooledObject : MonoBehaviour
 	static private List<LullabySheepPooledObject> objectControllers;
 
 	private float fallSpeed;
-	private Image currentImage;
+	private SpriteRenderer currentImage;
 	
 	//--------------------------------------------------------------------------
 	// static public methods
 	//--------------------------------------------------------------------------
-	static public LullabySheepPooledObject Spawn (Vector3 location, float fallSpeed, int direction, Sprite[] images)
+	static public LullabySheepPooledObject Spawn (Vector3 location, float fallSpeed, Sprite image)
 	{
 		// search for the first free LullabySheepPooledObject
 		foreach (LullabySheepPooledObject objectController in objectControllers) {
@@ -25,7 +25,7 @@ public class LullabySheepPooledObject : MonoBehaviour
 			if (objectController.gameObject.activeSelf == false) {
 				// set it up
 				objectController.transform.position = location;
-				objectController.gameObject.GetComponent<Image> ().sprite = images [direction];
+				objectController.gameObject.GetComponent<SpriteRenderer> ().sprite = image;
 				objectController.fallSpeed = fallSpeed;
 				
 				// switch it back on
@@ -98,7 +98,16 @@ public class LullabySheepPooledObject : MonoBehaviour
 	protected void OnBecameInvisible ()
 	{
 		// I've left the screen. Disable myself so I'm available again
-		gameObject.SetActive (false);
+		if (gameObject.activeSelf) {
+			LullabyManager.Instance.numberOfMisses++;
+			gameObject.SetActive (false);
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+		if (coll.gameObject.name == "Paddle") {
+			gameObject.SetActive (false);
+		}
 	}
 	
 	//--------------------------------------------------------------------------

@@ -6,37 +6,38 @@ using System.Collections.Generic;
 //------------------------------------------------------------------------------
 // class definition
 //------------------------------------------------------------------------------
+[RequireComponent (typeof(BoxCollider2D))]
 public class LullabyDemonPooledObject : MonoBehaviour
 {
 	// singleton list to hold all our projectiles
 	static private List<LullabyDemonPooledObject> objectControllers;
 
 	private float fallSpeed;
-	private Image currentImage;
-	
+	private SpriteRenderer currentImage;
+
 	//--------------------------------------------------------------------------
 	// static public methods
 	//--------------------------------------------------------------------------
-	static public LullabyDemonPooledObject Spawn (Vector3 location, float fallSpeed, int direction, Sprite[] images)
+	static public LullabyDemonPooledObject Spawn (Vector3 location, float fallSpeed, Sprite image)
 	{
-		// search for the first free LullabyDemonPooledObject
+		// search for the first free LullabySheepPooledObject
 		foreach (LullabyDemonPooledObject objectController in objectControllers) {
 			// if disabled, then it's available
 			if (objectController.gameObject.activeSelf == false) {
 				// set it up
 				objectController.transform.position = location;
-				objectController.gameObject.GetComponent<Image> ().sprite = images [direction];
+				objectController.gameObject.GetComponent<SpriteRenderer> ().sprite = image;
 				objectController.fallSpeed = fallSpeed;
-				
+
 				// switch it back on
 				objectController.gameObject.SetActive (true);
-				
+
 				// return a reference to the caller
 				return objectController;
-				
+
 			}
 		}
-		
+
 		Debug.LogWarning ("Don't have enough objects pre-allocated");
 		// if we get here, we haven't pooled enough agents or our spawn rate is too high.
 
@@ -45,12 +46,12 @@ public class LullabyDemonPooledObject : MonoBehaviour
 
 	static public void ResetControllers ()
 	{
-		
+
 		foreach (LullabyDemonPooledObject objectController in objectControllers) {
 			objectController.gameObject.SetActive (false);
 		}
 	}
-	
+
 	//--------------------------------------------------------------------------
 	// protected mono methods
 	//--------------------------------------------------------------------------
@@ -91,6 +92,7 @@ public class LullabyDemonPooledObject : MonoBehaviour
 
 	protected void Update ()
 	{
+		// travel in a straight line at 4 units per second
 		transform.position -= transform.up * (Time.deltaTime * fallSpeed);
 	}
 
@@ -99,7 +101,14 @@ public class LullabyDemonPooledObject : MonoBehaviour
 		// I've left the screen. Disable myself so I'm available again
 		gameObject.SetActive (false);
 	}
-	
+
+	void OnCollisionEnter2D(Collision2D coll) {
+		if (coll.gameObject.name == "Paddle") {
+			LullabyManager.Instance.numberOfMisses = 4;
+			gameObject.SetActive (false);
+		}
+	}
+
 	//--------------------------------------------------------------------------
 	// private methods
 	//--------------------------------------------------------------------------
