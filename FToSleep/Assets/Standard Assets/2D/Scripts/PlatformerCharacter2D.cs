@@ -148,22 +148,6 @@ namespace UnityStandardAssets._2D
                 attackTrigger.enabled = true;
 
                 m_Anim.SetTrigger("Swipe");
-
-                GameObject pivot = GameObject.FindGameObjectWithTag("AttackTrigger");
-                if (pivot != null)
-                {
-                    //Debug.Log(pivot);
-                    BoxCollider2D boxCollider = pivot.GetComponent<BoxCollider2D>();
-
-                    if (boxCollider != null)
-                    {
-                        boxCollider.enabled = true;
-                    }
-                }
-                else
-                {
-                    Debug.Log("Cannot find Pivot");
-                }
             }
 
            
