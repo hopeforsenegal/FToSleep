@@ -16,6 +16,7 @@ public class MetagameController : MonoBehaviour
 	private static MetagameController instance;
 
 	private Transform playerTransform;
+	private int insanity = 0;
 
 	protected void Awake ()
 	{
@@ -23,6 +24,7 @@ public class MetagameController : MonoBehaviour
 			instance = this;
 		} else if (instance != this) {
 			DestroyObject (gameObject);
+			return;
 		}
 
 		DontDestroyOnLoad (gameObject);
@@ -38,5 +40,20 @@ public class MetagameController : MonoBehaviour
 	public static bool IsActive ()
 	{
 		return instance != null;
+	}
+
+	public static int GetInsanity(){
+		if (IsActive ()) {
+			Debug.Log ("GetInsanity");
+			return instance.insanity;
+		}
+		return 0;
+	}
+
+	public static void IncreaseInsanity(){
+		if (IsActive ()) {
+			Debug.Log ("IncreaseInsanity");
+			instance.insanity++;
+		}
 	}
 }
