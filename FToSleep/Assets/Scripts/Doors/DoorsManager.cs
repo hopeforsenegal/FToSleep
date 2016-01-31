@@ -85,6 +85,7 @@ public class DoorsManager : MonoBehaviour {
 
 		matchStarted = false;
 
+		AudioController.StopAllSounds ();
 		MetagameController.GoToMain ();
 	}
 

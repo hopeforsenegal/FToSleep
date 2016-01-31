@@ -76,6 +76,7 @@ public class BathroomManager : MonoBehaviour
 	{
 		Debug.Log ("End Bathroom Game");
 
+		AudioController.StopAllSounds ();
 		matchStarted = false;
 		MetagameController.GoToMain ();
 	}
