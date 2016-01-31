@@ -15,6 +15,8 @@ public class BathroomEnemy : MonoBehaviour
 		if (tempObject != null) {
 			mainPlayer = tempObject.GetComponent<Knight2D> ();
 		}
+
+		Debug.Assert (mainPlayer != null);
 	}
 
 	void OnCollisionEnter2D (Collision2D coll)
@@ -22,6 +24,7 @@ public class BathroomEnemy : MonoBehaviour
 		Debug.Log ("Did you swing at me?");
 		if (coll.gameObject.name == "Knight") {
 			Debug.Log ("Et tu, Brute?");
+			Debug.Assert (mainPlayer != null);
 			if (mainPlayer) {
 				mainPlayer.GotTouched ();
 			}
