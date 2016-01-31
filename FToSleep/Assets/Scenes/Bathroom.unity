@@ -1126,6 +1126,19 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 21224190, guid: 4d47a2164da365241b5eab0982a239d9, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d15e446296b74bddbcc164214cf3454,
+        type: 3}
+    - target: {fileID: 21224190, guid: 4d47a2164da365241b5eab0982a239d9, type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21224190, guid: 4d47a2164da365241b5eab0982a239d9, type: 2}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d47a2164da365241b5eab0982a239d9, type: 2}
   m_IsPrefabParent: 0
@@ -4001,22 +4014,6 @@ Prefab:
     - target: {fileID: 412014, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028518, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21268550, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21268550, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21268550, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
-      propertyPath: m_Color.b
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e713a5a6323f054439b4a2c5ec88576d, type: 2}
