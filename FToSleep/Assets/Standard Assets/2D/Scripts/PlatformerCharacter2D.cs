@@ -10,6 +10,10 @@ namespace UnityStandardAssets._2D
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
         [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
         [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
+        [SerializeField] private Collider2D attackTrigger;
+        [SerializeField] private float attackCooldown = 0.3f;
+
+
 
         private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
         const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
@@ -20,6 +24,13 @@ namespace UnityStandardAssets._2D
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
+        private bool attacking = false;
+        private float attackTimer = 0;
+        private float attackCd;
+      
+
+
+
         private void Awake()
         {
             // Setting up references.
@@ -27,8 +38,10 @@ namespace UnityStandardAssets._2D
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
-        }
 
+            attackTrigger.enabled = false;
+            attackCd = attackCooldown;
+        }
 
         private void FixedUpdate()
         {
@@ -48,6 +61,20 @@ namespace UnityStandardAssets._2D
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
         }
 
+        void Update()
+        {
+            if(attacking)
+            {
+                if(attackTimer > 0)
+                {
+                    attackTimer -= Time.deltaTime;
+                } else
+                {
+                    attacking = false;
+                    attackTrigger.enabled = false;
+                }
+            }
+        }
 
         public void Move(float move, bool crouch, bool jump)
         {
@@ -113,17 +140,33 @@ namespace UnityStandardAssets._2D
 
         public void Attack()
         {
-            Debug.Log("Attack");
+            if(!attacking)
+            {
+                Debug.Log("Attack");
+                attacking = true;
+                attackTimer = attackCd;
+                attackTrigger.enabled = true;
 
-            GameObject pivot = GameObject.FindGameObjectWithTag("Pivot");
-            if( pivot != null)
-            {
-                Debug.Log(pivot);
+                m_Anim.SetTrigger("Swipe");
+
+                GameObject pivot = GameObject.FindGameObjectWithTag("AttackTrigger");
+                if (pivot != null)
+                {
+                    //Debug.Log(pivot);
+                    BoxCollider2D boxCollider = pivot.GetComponent<BoxCollider2D>();
+
+                    if (boxCollider != null)
+                    {
+                        boxCollider.enabled = true;
+                    }
+                }
+                else
+                {
+                    Debug.Log("Cannot find Pivot");
+                }
             }
-            else
-            {
-                Debug.Log("Cannot find Pivot");
-            }
+
+           
         }
 
     }

@@ -13,4 +13,14 @@ public class BathroomEnemy : MonoBehaviour
 			gameObject.SetActive (false);
 		}
 	}
+
+    void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        Debug.Log("Got hit by sword?");
+        if(otherObject.name == "AttackTrigger")
+        {
+            Debug.Log("Attack Trigger");
+            gameObject.SetActive(false);
+        }
+    }
 }
