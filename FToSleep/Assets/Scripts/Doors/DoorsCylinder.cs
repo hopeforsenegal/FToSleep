@@ -21,7 +21,7 @@ public class DoorsCylinder : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		_currentStep = (int) Random.Range (0.0f, 7.0f);
+		_currentStep = (int) Random.Range (1.0f, 7.0f);
 		UpdateRotation (false);
 	}
 	
