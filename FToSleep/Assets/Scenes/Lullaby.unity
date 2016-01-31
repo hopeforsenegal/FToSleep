@@ -703,8 +703,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7355514205ac243e88e381c97326e161, type: 3}
   earlyDemonSprites:
   - {fileID: 21300000, guid: 2518e4d6306b14924a0ed6d54eeabc7b, type: 3}
-  lateDemonSprites:
   - {fileID: 21300000, guid: 2518e4d6306b14924a0ed6d54eeabc7b, type: 3}
+  - {fileID: 21300000, guid: cf7e227f49cbc4e099437f1447dfb1bd, type: 3}
+  lateDemonSprites:
+  - {fileID: 21300000, guid: cf7e227f49cbc4e099437f1447dfb1bd, type: 3}
   numberOfMisses: 0
 --- !u!1 &774687339
 GameObject:
