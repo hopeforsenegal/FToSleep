@@ -189,6 +189,7 @@ public class MetagameController : MonoBehaviour
 	public static void SetPlayedGame (int game)
 	{
 		if (IsActive ()) {
+			Debug.Log ("playing:" + game);
 			instance.gamesPlayed [game] = true;
 			instance.lastPlayedGame = game;
 		}
@@ -206,6 +207,7 @@ public class MetagameController : MonoBehaviour
 	{
 		if (IsActive ()) {
 			instance.gamesPlayed [instance.lastPlayedGame] = false;
+			Debug.Log ("able to retry:" + instance.lastPlayedGame);
 		}
 	}
 }
