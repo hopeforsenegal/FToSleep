@@ -687,7 +687,7 @@ MonoBehaviour:
   lullabyMusic: {fileID: 8300000, guid: c5a320e069b684e329a4d33573f79964, type: 3}
   ambienceMusic: {fileID: 8300000, guid: 669030dd1893f404ebf013cea809dfa8, type: 3}
   snore: {fileID: 8300000, guid: 085fecda5c9fb4d53aacb2aae0996f49, type: 3}
-  endCountdownTime: 60
+  endCountdownTime: 45
   matchStarted: 0
   startGameOnLaunch: 1
   startLocation: {fileID: 47711898}
@@ -699,6 +699,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b3948751c852d40dab6df6b035f87a97, type: 3}
   lateSheepSprites:
   - {fileID: 21300000, guid: b3948751c852d40dab6df6b035f87a97, type: 3}
+  - {fileID: 21300000, guid: e380930e81a044c239fd78e778173b9d, type: 3}
+  - {fileID: 21300000, guid: 7355514205ac243e88e381c97326e161, type: 3}
   earlyDemonSprites:
   - {fileID: 21300000, guid: 2518e4d6306b14924a0ed6d54eeabc7b, type: 3}
   lateDemonSprites:
