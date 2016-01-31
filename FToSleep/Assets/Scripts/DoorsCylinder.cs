@@ -3,18 +3,53 @@ using System.Collections;
 
 public class DoorsCylinder : MonoBehaviour {
 
-	public float speed = 5.0f;
+	private float _currentStep = 0.0f;
+	private float _stepAmount = 45.0f;
+	private float _speed = 5.0f;
+
+	public void SetSortingOrder( int sortingOrder ) {
+		SpriteRenderer sprite = GetComponent<SpriteRenderer> ();
+		if (sprite) {
+			sprite.sortingOrder = sortingOrder;
+		}
+	}
+
+	public void RotateCylinder () {
+		if (Input.GetAxis ("Horizontal") > 0) {
+			_currentStep--;
+		} else {
+			_currentStep++;
+		}
+	}
+
+	public bool IsInSolvedPosition () {
+		return _currentStep == 0.0f;
+	}
 
 	// Use this for initialization
 	void Start () {
-	
+		_currentStep = (int) Random.Range (0.0f, 7.0f);
+		UpdateRotation (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 v3 = new Vector3( Input.GetAxis( "Horizontal" ), 0.0f, 1.0f );
-		Quaternion qTo = Quaternion.LookRotation( v3 );
-
-		transform.rotation = Quaternion.Slerp( transform.rotation, qTo, speed * Time.deltaTime );
+		UpdateRotation ();
 	}
+
+	void UpdateRotation ( bool animate = true ) {
+		if (_currentStep > 7.0f) {
+			_currentStep = 0.0f;
+		} else if (_currentStep < 0.0f) {
+			_currentStep = 7.0f;
+		}
+		Vector3 angle = new Vector3 (0.0f, 0.0f, _currentStep * _stepAmount);
+		Quaternion rotation = Quaternion.Euler (angle);
+		if (animate) {
+			transform.rotation = Quaternion.Slerp (transform.rotation, rotation, _speed * Time.deltaTime);
+		} else {
+			transform.rotation = rotation;
+		}
+	}
+		
 }
