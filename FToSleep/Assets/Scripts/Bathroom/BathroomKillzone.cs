@@ -7,8 +7,7 @@ public class BathroomKillzone : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            //TODO - load back to "Room" scene here.
-            Debug.Break();
+			BathroomManager.Instance.EndGame ();
         }
     }
 }
