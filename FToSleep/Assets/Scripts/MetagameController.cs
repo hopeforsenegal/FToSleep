@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 // Keeps track of what screen you are on and need to go back to
@@ -15,7 +16,13 @@ public class MetagameController : MonoBehaviour
 
 	private static MetagameController instance;
 
-	private Transform playerTransform;
+	private TransformData playerTransformData;
+	private int insanity = 0;
+
+	private float deltaTime = 0.0f;
+	private float trackingTime = 0.0f;
+	private int countDownEndSeconds = 0;
+	public int endCountdownTime = 300;
 
 	protected void Awake ()
 	{
@@ -23,20 +30,129 @@ public class MetagameController : MonoBehaviour
 			instance = this;
 		} else if (instance != this) {
 			DestroyObject (gameObject);
+			return;
 		}
 
 		DontDestroyOnLoad (gameObject);
 
+		SavePlayerPosition ();
+	}
+
+	private void SavePlayerPosition ()
+	{
 		GameObject tempObject;
 		tempObject = GameObject.Find ("Player");
 		if (tempObject != null) {
-			playerTransform = tempObject.GetComponent<Transform> ();
+			playerTransformData = tempObject.transform.Clone ();
 			tempObject = null;
+			Debug.Log ("SetPlayerPosition x:" + playerTransformData.position.x + " y:" + playerTransformData.position.y);
+		} else {
+			Debug.LogWarning ("NOT HERE!");
+		}
+	}
+
+	protected void Start ()
+	{
+		trackingTime = Time.time;
+		deltaTime = Time.time;
+
+		PositionYourPlayer ();
+		RestartCountdown ();
+		StartGame ();
+	}
+
+	protected void Update ()
+	{
+		// Change the remaining time
+		if (Time.time - deltaTime >= 1.0f) {
+			deltaTime = Time.time;
+
+			countDownEndSeconds--;
+			//RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
+		}
+
+		if (Input.GetButtonDown ("Cancel")) {
+			Debug.Log ("Escape!!!!!!!!");
+			EndGame ();
+		}
+
+		//RemainingTimeText.Show (true);
+		trackingTime += Time.deltaTime;
+
+		// If the time has run down 
+		if (countDownEndSeconds <= 0) {
+			EndGame ();
+		}
+	}
+
+	public void StartGame ()
+	{
+		Debug.Log ("Start Overall Game");
+	}
+
+	public void EndGame ()
+	{
+		Debug.Log ("End Overall Game");
+		SceneManager.LoadScene ("Start");
+	}
+
+	public static void GoToMain ()
+	{
+		if (IsActive ()) {
+			Debug.Log ("GoToMain");
+			SceneManager.LoadScene ("Main");
 		}
 	}
 
 	public static bool IsActive ()
 	{
 		return instance != null;
+	}
+
+	public void RestartCountdown ()
+	{
+		countDownEndSeconds = endCountdownTime;
+		//RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
+	}
+
+	public static int GetInsanity ()
+	{
+		if (IsActive ()) {
+			Debug.Log ("GetInsanity:" + instance.insanity);
+			return instance.insanity;
+		}
+		return 0;
+	}
+
+	public static void IncreaseInsanity ()
+	{
+		if (IsActive ()) {
+			Debug.Log ("IncreaseInsanity:" + instance.insanity);
+			instance.insanity++;
+		}
+	}
+
+	public static void PositionYourPlayer ()
+	{
+		if (IsActive ()) {
+			Debug.Log ("PositionYourPlayer");
+
+			GameObject tempObject;
+			tempObject = GameObject.Find ("Player");
+			if (tempObject != null) {
+				Transform transform = tempObject.GetComponent<Transform> ();
+				transform.position = instance.playerTransformData.position;
+				transform.rotation = instance.playerTransformData.rotation;
+				Debug.Log ("PositionYourPlayer x:" + transform.position.x + " y:" + transform.position.y);
+			}
+		}
+	}
+
+	public static void RecordPlayerPosition ()
+	{
+		if (IsActive ()) {
+			Debug.Log ("RecordPlayerPosition");
+			instance.SavePlayerPosition ();
+		}
 	}
 }

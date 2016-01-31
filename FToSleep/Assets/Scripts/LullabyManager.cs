@@ -87,7 +87,7 @@ public class LullabyManager : MonoBehaviour
 			trackingTime += Time.deltaTime;
 
 			if (numberOfMisses >= 3) {
-				InsanityController.IncreaseInsanity ();
+				MetagameController.IncreaseInsanity ();
 				EndGame ();
 				return;
 			}
@@ -120,6 +120,7 @@ public class LullabyManager : MonoBehaviour
 
 		DespawnSymbols ();
 		canvas.gameObject.SetActive (false);
+		MetagameController.GoToMain ();
 	}
 
 	private void SpawnNewSheep ()
