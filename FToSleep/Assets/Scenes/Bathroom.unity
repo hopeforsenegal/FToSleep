@@ -1151,6 +1151,14 @@ Prefab:
       propertyPath: m_Name
       value: Destroyer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 21219692, guid: 31ebdfa33e3762b49bec52d95371c1f0, type: 2}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11439982, guid: 31ebdfa33e3762b49bec52d95371c1f0, type: 2}
+      propertyPath: m_MaxSpeed
+      value: 9.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31ebdfa33e3762b49bec52d95371c1f0, type: 2}
   m_IsPrefabParent: 0
