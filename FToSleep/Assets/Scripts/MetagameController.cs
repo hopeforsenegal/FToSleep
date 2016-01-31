@@ -20,6 +20,7 @@ public class MetagameController : MonoBehaviour
 	private int insanity = 0;
 	private bool[] gamesPlayed = new bool[4];
 
+	private bool gameRunning = false;
 	private float deltaTime = 0.0f;
 	private float trackingTime = 0.0f;
 	private int countDownEndSeconds = 0;
@@ -64,25 +65,27 @@ public class MetagameController : MonoBehaviour
 
 	protected void Update ()
 	{
-		// Change the remaining time
-		if (Time.time - deltaTime >= 1.0f) {
-			deltaTime = Time.time;
+		if (gameRunning) {
+			// Change the remaining time
+			if (Time.time - deltaTime >= 1.0f) {
+				deltaTime = Time.time;
 
-			countDownEndSeconds--;
-			//RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
-		}
+				countDownEndSeconds--;
+				//RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
+			}
 
-		if (Input.GetButtonDown ("Cancel")) {
-			Debug.Log ("Escape!!!!!!!!");
-			EndGame ();
-		}
+			if (Input.GetButtonDown ("Cancel")) {
+				Debug.Log ("Escape!!!!!!!!");
+				EndGame ();
+			}
 
-		//RemainingTimeText.Show (true);
-		trackingTime += Time.deltaTime;
+			//RemainingTimeText.Show (true);
+			trackingTime += Time.deltaTime;
 
-		// If the time has run down 
-		if (countDownEndSeconds <= 0) {
-			EndGame ();
+			// If the time has run down 
+			if (countDownEndSeconds <= 0) {
+				EndGame ();
+			}
 		}
 	}
 
@@ -90,10 +93,12 @@ public class MetagameController : MonoBehaviour
 	{
 		Debug.Log ("Start Overall Game");
 		gamesPlayed = new bool[4];
+		gameRunning = true;
 	}
 
 	public void EndGame ()
 	{
+		gameRunning = false;
 		Debug.Log ("End Overall Game");
 		SceneManager.LoadScene ("Start");
 	}
