@@ -608,13 +608,13 @@ MonoBehaviour:
   demonFallRate: 1.5
   demonFallSpeed: 140
   earlySheepSprites:
-  - {fileID: 21300000, guid: 24c98eb08ed624b9f8f796ad6ad42f63, type: 3}
+  - {fileID: 21300000, guid: b3948751c852d40dab6df6b035f87a97, type: 3}
   lateSheepSprites:
-  - {fileID: 21300000, guid: 24c98eb08ed624b9f8f796ad6ad42f63, type: 3}
+  - {fileID: 21300000, guid: b3948751c852d40dab6df6b035f87a97, type: 3}
   earlyDemonSprites:
-  - {fileID: 21300000, guid: 24c98eb08ed624b9f8f796ad6ad42f63, type: 3}
+  - {fileID: 21300000, guid: 2518e4d6306b14924a0ed6d54eeabc7b, type: 3}
   lateDemonSprites:
-  - {fileID: 21300052, guid: f45a39483cf4f914a816af821c9262bb, type: 3}
+  - {fileID: 21300000, guid: 2518e4d6306b14924a0ed6d54eeabc7b, type: 3}
   numberOfMisses: 0
 --- !u!1 &774687339
 GameObject:
@@ -1432,6 +1432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d2f77e90fb74a029ddf8e9c6f8d0c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endCountdownTime: 300
 --- !u!4 &1864423485
 Transform:
   m_ObjectHideFlags: 0
