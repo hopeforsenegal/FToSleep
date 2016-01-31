@@ -2,8 +2,6 @@
 using System.Collections;
 
 public class Interactables : MonoBehaviour {
-    
-    private string m_id;
 
     [SerializeField]
     private string m_SceneToLoad;
@@ -17,7 +15,7 @@ public class Interactables : MonoBehaviour {
 
 
     void Awake() {
-        m_id = m_SceneToLoad;
+
     }
 
 }
