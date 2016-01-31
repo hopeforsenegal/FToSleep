@@ -49,6 +49,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_NextStep = m_StepCycle/2f;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            Cursor.visible = false;
         }
 
 
