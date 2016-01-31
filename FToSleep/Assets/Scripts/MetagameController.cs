@@ -19,6 +19,7 @@ public class MetagameController : MonoBehaviour
 	private TransformData playerTransformData;
 	private int insanity = 0;
 	public bool[] gamesPlayed = new bool[4];
+	public bool[] gamesWon = new bool[4];
 	public AudioClip startSoundEffect;
 	public AudioClip insanityFail;
 	private string nextSceneToLoad;
@@ -30,7 +31,7 @@ public class MetagameController : MonoBehaviour
 	private float deltaTime = 0.0f;
 	private float trackingTime = 0.0f;
 	private int countDownEndSeconds = 0;
-	private int lastPlayedGame;
+	public int lastPlayedGame;
 	public int endCountdownTime = 300;
 
 	protected void Awake ()
@@ -81,7 +82,7 @@ public class MetagameController : MonoBehaviour
 				//RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
 			}
 
-			if (gamesPlayed [1] == true && gamesPlayed [2] == true && true && gamesPlayed [3] == true && SceneManager.GetActiveScene().name.Contains("Main")) {
+			if (gamesWon [1] == true && gamesWon [2] == true  && gamesWon [3] == true && SceneManager.GetActiveScene().name.Contains("Main")) {
 				WinGame ();
 				return;
 			}
@@ -108,6 +109,7 @@ public class MetagameController : MonoBehaviour
 		Debug.Log ("Start Overall Game");
 		AudioController.PlaySoundEffect (startSoundEffect);
 		gamesPlayed = new bool[4]{false, false, false, false};
+		gamesWon = new bool[4]{false, false, false, false};
 		gameRunning = true;
 	}
 
@@ -210,6 +212,14 @@ public class MetagameController : MonoBehaviour
 			Debug.Log ("playing:" + game);
 			instance.gamesPlayed [game] = true;
 			instance.lastPlayedGame = game;
+		}
+	}
+
+	public static void SetWonGame (int game)
+	{
+		if (IsActive ()) {
+			Debug.Log ("won:" + game);
+			instance.gamesWon [game] = true;
 		}
 	}
 

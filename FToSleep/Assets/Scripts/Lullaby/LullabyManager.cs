@@ -98,6 +98,7 @@ public class LullabyManager : MonoBehaviour
 
 			// If the time has run down 
 			if (countDownEndSeconds <= 0) {
+				MetagameController.SetWonGame (MetagameController.Instance.lastPlayedGame);
 				EndGame ();
 			}
 		}

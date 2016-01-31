@@ -97,6 +97,7 @@ public class DoorsManager : MonoBehaviour {
 	public void CylinderComplete () {
 		_currentCylinderIndex++;
 		if (_currentCylinderIndex == cylinderControllers.Length) {
+			MetagameController.SetWonGame (MetagameController.Instance.lastPlayedGame);
 			EndGame ();
 		} else {
 			AudioController.PlaySoundEffect (nextCylinder);
