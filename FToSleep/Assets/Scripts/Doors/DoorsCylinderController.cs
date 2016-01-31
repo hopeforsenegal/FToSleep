@@ -38,7 +38,8 @@ public class DoorsCylinderController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!_complete) {
-			if (Input.GetKeyDown (KeyCode.LeftArrow) == true || Input.GetKeyDown (KeyCode.RightArrow) == true) {
+			if (Input.GetKeyDown (KeyCode.LeftArrow) == true || Input.GetKeyDown (KeyCode.RightArrow) == true ||
+				Input.GetKeyDown (KeyCode.A) == true || Input.GetKeyDown (KeyCode.D) == true) {
 				_cylinder.RotateCylinder ();
 			}
 			if (Input.GetKeyDown (KeyCode.Space) == true) {
