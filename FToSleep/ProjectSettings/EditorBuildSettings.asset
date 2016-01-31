@@ -10,6 +10,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
   - enabled: 1
+    path: Assets/Scenes/SplashScreen.unity
+  - enabled: 1
     path: Assets/Scenes/Doors.unity
   - enabled: 1
     path: Assets/Scenes/BathroomAttack.unity

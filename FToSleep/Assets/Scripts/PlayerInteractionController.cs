@@ -47,10 +47,11 @@ public class PlayerInteractionController : MonoBehaviour {
 
     public static void AddSceneAdditive() {
         if (CurrentTarget != null) {
-            MetagameController.RecordPlayerPosition();
-            string scene = CurrentTarget.MiniGameName;
+			MetagameController.RecordPlayerPosition();
+			MetagameController.SetNextSceneToLoad (CurrentTarget.MiniGameName);
+			MetagameController.SetNextSplashScreenBackground (CurrentTarget.SplashBackground);
             CurrentTarget = null;
-            SceneManager.LoadScene(scene);
+			SceneManager.LoadScene("SplashScreen");
         }
     }
 

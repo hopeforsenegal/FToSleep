@@ -12,6 +12,8 @@ public class Interactables : MonoBehaviour
 	private string m_PromptMessage;
 	[SerializeField]
 	private AudioClip m_PromptSound;
+	[SerializeField]
+	private Sprite m_SplashBackground;
 
 	public string MiniGameName {
 		get {
@@ -34,6 +36,12 @@ public class Interactables : MonoBehaviour
 	public AudioClip PromptSound {
 		get {
 			return m_PromptSound;
+		}
+	}
+
+	public Sprite SplashBackground {
+		get {
+			return m_SplashBackground;
 		}
 	}
 }
