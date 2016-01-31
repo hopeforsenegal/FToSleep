@@ -44,7 +44,7 @@ Rigidbody2D:
   m_LinearDrag: 100
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -91,6 +91,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84fcf7341629c45038d2478fafbc36e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathNoise:
+  - {fileID: 8300000, guid: 9f1230731c537444f824fe1f7c14d5b8, type: 3}
+  - {fileID: 8300000, guid: 9e16e952e9ee143b297686161c12fbed, type: 3}
+  - {fileID: 8300000, guid: 75b9c3360f3914ce79d6bf55656b17bf, type: 3}
 --- !u!212 &21268550
 SpriteRenderer:
   m_ObjectHideFlags: 1

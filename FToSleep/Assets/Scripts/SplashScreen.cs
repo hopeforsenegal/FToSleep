@@ -33,8 +33,8 @@ public class SplashScreen : MonoBehaviour
 	protected void Update ()
 	{
 		if (Input.GetButtonDown ("Fire1")) {
-			Debug.Log ("Lets playf");
 			string sceneToLoad = SceneToLoad ();
+			Debug.Log ("Lets play:" + sceneToLoad);
 			SceneManager.LoadScene (sceneToLoad);
 		}
 	}
