@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 // Keeps track of what screen you are on and need to go back to
@@ -61,6 +62,11 @@ public class MetagameController : MonoBehaviour
 			//RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
 		}
 
+		if ( Input.GetButtonDown("Cancel") ) {
+			Debug.Log ("Escape!!!!!!!!");
+			EndGame ();
+		}
+
 		//RemainingTimeText.Show (true);
 		trackingTime += Time.deltaTime;
 
@@ -78,6 +84,7 @@ public class MetagameController : MonoBehaviour
 	public void EndGame ()
 	{
 		Debug.Log ("End Overall Game");
+		SceneManager.LoadScene("Start");
 	}
 
 	public static bool IsActive ()
@@ -93,7 +100,7 @@ public class MetagameController : MonoBehaviour
 
 	public static int GetInsanity(){
 		if (IsActive ()) {
-			Debug.Log ("GetInsanity");
+			Debug.Log ("GetInsanity:" + instance.insanity);
 			return instance.insanity;
 		}
 		return 0;
@@ -101,7 +108,7 @@ public class MetagameController : MonoBehaviour
 
 	public static void IncreaseInsanity(){
 		if (IsActive ()) {
-			Debug.Log ("IncreaseInsanity");
+			Debug.Log ("IncreaseInsanity:" + instance.insanity);
 			instance.insanity++;
 		}
 	}
