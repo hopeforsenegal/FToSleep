@@ -6,9 +6,10 @@ using System.Collections.Generic;
 [RequireComponent (typeof(PlayerInput))]
 public class Runner : MonoBehaviour
 {
+	public Animator anim;
+
 	public void Attack ()
 	{
-		Animator anim = GetComponentInParent<Animator> ();
 		anim.SetTrigger ("Swipe");
 	}
 }
