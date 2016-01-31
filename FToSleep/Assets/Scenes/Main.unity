@@ -6063,7 +6063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0daaf4d880f46e4397eac33cb14048b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_id: 0
+  m_id: 2
   m_SceneToLoad: Bathroom
 --- !u!65 &1844263810
 BoxCollider:
@@ -6765,7 +6765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0daaf4d880f46e4397eac33cb14048b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_id: 0
+  m_id: 3
   m_SceneToLoad: Lullaby
 --- !u!65 &2111585275
 BoxCollider:
@@ -6850,7 +6850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0daaf4d880f46e4397eac33cb14048b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_id: 0
+  m_id: 1
   m_SceneToLoad: Doors
 --- !u!65 &2131553860
 BoxCollider:
