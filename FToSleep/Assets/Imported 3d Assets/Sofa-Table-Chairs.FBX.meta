@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: deaa4b2bfd7528046b5401b4b093114d
+timeCreated: 1454182950
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Box014
+    100002: Chair-dark
+    100004: Chair-dark001
+    100006: Chair-dark002
+    100008: Chair-dark003
+    100010: Chair-light
+    100012: Chair-light001
+    100014: Chair-light002
+    100016: Chair-light003
+    100018: Cushion-back-left
+    100020: Cushion-back-right
+    100022: Cushion-bottom-left
+    100024: Cushion-bottom-right
+    100026: Leg-002
+    100028: Sofa
+    100030: Sofa-middle
+    100032: //RootNode
+    100034: Table-Dark
+    100036: Table-top
+    400000: Box014
+    400002: Chair-dark
+    400004: Chair-dark001
+    400006: Chair-dark002
+    400008: Chair-dark003
+    400010: Chair-light
+    400012: Chair-light001
+    400014: Chair-light002
+    400016: Chair-light003
+    400018: Cushion-back-left
+    400020: Cushion-back-right
+    400022: Cushion-bottom-left
+    400024: Cushion-bottom-right
+    400026: Leg-002
+    400028: Sofa
+    400030: Sofa-middle
+    400032: //RootNode
+    400034: Table-Dark
+    400036: Table-top
+    2300000: Box014
+    2300002: Chair-dark
+    2300004: Chair-dark001
+    2300006: Chair-dark002
+    2300008: Chair-dark003
+    2300010: Chair-light
+    2300012: Chair-light001
+    2300014: Chair-light002
+    2300016: Chair-light003
+    2300018: Cushion-back-left
+    2300020: Cushion-back-right
+    2300022: Cushion-bottom-left
+    2300024: Cushion-bottom-right
+    2300026: Leg-002
+    2300028: Sofa
+    2300030: Sofa-middle
+    2300032: Table-Dark
+    2300034: Table-top
+    3300000: Box014
+    3300002: Chair-dark
+    3300004: Chair-dark001
+    3300006: Chair-dark002
+    3300008: Chair-dark003
+    3300010: Chair-light
+    3300012: Chair-light001
+    3300014: Chair-light002
+    3300016: Chair-light003
+    3300018: Cushion-back-left
+    3300020: Cushion-back-right
+    3300022: Cushion-bottom-left
+    3300024: Cushion-bottom-right
+    3300026: Leg-002
+    3300028: Sofa
+    3300030: Sofa-middle
+    3300032: Table-Dark
+    3300034: Table-top
+    4300000: Sofa
+    4300002: Sofa-middle
+    4300004: Cushion-bottom-right
+    4300006: Cushion-bottom-left
+    4300008: Cushion-back-right
+    4300010: Cushion-back-left
+    4300012: Leg-002
+    4300014: Table-top
+    4300016: Chair-dark
+    4300018: Chair-light
+    4300020: Chair-light001
+    4300022: Chair-dark001
+    4300024: Table-Dark
+    4300026: Chair-light002
+    4300028: Chair-dark002
+    4300030: Chair-dark003
+    4300032: Chair-light003
+    4300034: Box014
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

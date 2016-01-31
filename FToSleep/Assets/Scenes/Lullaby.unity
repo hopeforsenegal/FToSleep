@@ -1415,7 +1415,7 @@ GameObject:
   - 4: {fileID: 1864423485}
   - 114: {fileID: 1864423484}
   m_Layer: 0
-  m_Name: InsanityController
+  m_Name: MetagameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1429,10 +1429,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1864423483}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a34b1b291e5b7475cb4aafc883222f95, type: 3}
+  m_Script: {fileID: 11500000, guid: 76d2f77e90fb74a029ddf8e9c6f8d0c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  insanity: 0
 --- !u!4 &1864423485
 Transform:
   m_ObjectHideFlags: 0
