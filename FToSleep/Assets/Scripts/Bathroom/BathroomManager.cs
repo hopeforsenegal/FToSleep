@@ -83,11 +83,9 @@ public class BathroomManager : MonoBehaviour
 		MetagameController.GoToMain ();
 	}
 
-	public void GetSawed(){
-		// Play some sound
-
-
-		MetagameController.IncreaseInsanity();
+	public void GetSawed ()
+	{
+		MetagameController.IncreaseInsanity ();
 		MetagameController.AbleToRetryPlayedGame ();
 	}
 
