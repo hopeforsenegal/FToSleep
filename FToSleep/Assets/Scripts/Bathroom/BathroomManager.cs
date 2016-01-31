@@ -1,26 +1,25 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
-public class DoorsManager : MonoBehaviour {
-
+public class BathroomManager : MonoBehaviour
+{
 	// Singleton
-	public static DoorsManager Instance {
+	public static BathroomManager Instance {
 		get {
 			return instance;
 		}
 	}
 
-	private static DoorsManager instance;
+	private static BathroomManager instance;
 
 	private float deltaTime = 0.0f;
 	private float trackingTime = 0.0f;
 	private int countDownEndSeconds = 0;
-	public int endCountdownTime = 30;
+	public int endCountdownTime = 60;
 	public bool matchStarted;
 	public bool startGameOnLaunch;
-
-	public DoorsCylinderController[] cylinderControllers;
-	private int _currentCylinderIndex = 0;
 
 	protected void Awake ()
 	{
@@ -63,14 +62,9 @@ public class DoorsManager : MonoBehaviour {
 
 	public void StartGame ()
 	{
-		Debug.Log ("Start Doors Game");
-
-		for (int index = 0; index < cylinderControllers.Length; index++) {
-			cylinderControllers [index].SetSortingOrder (index);
-		}
+		Debug.Log ("Start Bathroom Game");
 
 		matchStarted = true;
-		cylinderControllers [_currentCylinderIndex].StartCylinderPuzzle ();
 	}
 
 	public bool IsMatchStarted ()
@@ -80,18 +74,10 @@ public class DoorsManager : MonoBehaviour {
 
 	public void EndGame ()
 	{
-		Debug.Log ("End Doors Game");
+		Debug.Log ("End Bathroom Game");
 
 		matchStarted = false;
-	}
-
-	public void CylinderComplete () {
-		_currentCylinderIndex++;
-		if (_currentCylinderIndex == cylinderControllers.Length) {
-			EndGame ();
-		} else {
-			cylinderControllers [_currentCylinderIndex].StartCylinderPuzzle ();
-		}
+		MetagameController.GoToMain ();
 	}
 
 	public void RestartCountdown ()

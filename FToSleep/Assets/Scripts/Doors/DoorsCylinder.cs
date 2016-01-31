@@ -46,7 +46,7 @@ public class DoorsCylinder : MonoBehaviour {
 		Vector3 angle = new Vector3 (0.0f, 0.0f, _currentStep * _stepAmount);
 		Quaternion rotation = Quaternion.Euler (angle);
 		if (animate) {
-			transform.rotation = Quaternion.Slerp (transform.rotation, rotation, _speed * Time.deltaTime);
+			transform.rotation = Quaternion.Lerp (transform.rotation, rotation, _speed * Time.deltaTime);
 		} else {
 			transform.rotation = rotation;
 		}

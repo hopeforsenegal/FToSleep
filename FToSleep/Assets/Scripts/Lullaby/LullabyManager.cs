@@ -127,12 +127,12 @@ public class LullabyManager : MonoBehaviour
 	{
 		Debug.Log ("SpawnNewSheep");
 		Sprite sheepImage = null;
-		if(countDownEndSeconds >= endCountdownTime/2){
+		if (countDownEndSeconds >= endCountdownTime / 2) {
 			// Start nice
-			sheepImage = earlySheepSprites[0];
-		}else{
+			sheepImage = earlySheepSprites [0];
+		} else {
 			// get hellish
-			sheepImage = lateSheepSprites[0];
+			sheepImage = lateSheepSprites [0];
 		}
 		Vector3 newPosition = new Vector3 (startLocation.position.x, startLocation.position.y);
 		newPosition.x = Random.Range (-startLocation.position.x, startLocation.position.x);
@@ -143,12 +143,12 @@ public class LullabyManager : MonoBehaviour
 	{
 		Debug.Log ("SpawnNewDemon");
 		Sprite demonImage = null;
-		if(countDownEndSeconds >= endCountdownTime/2){
+		if (countDownEndSeconds >= endCountdownTime / 2) {
 			// Start nice
-			demonImage = earlyDemonSprites[0];
-		}else{
+			demonImage = earlyDemonSprites [0];
+		} else {
 			// get hellish
-			demonImage = lateSheepSprites[0];
+			demonImage = lateSheepSprites [0];
 		}
 		Vector3 newPosition = new Vector3 (startLocation.position.x, startLocation.position.y);
 		newPosition.x = Random.Range (-startLocation.position.x, startLocation.position.x);
