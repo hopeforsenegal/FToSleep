@@ -35,6 +35,7 @@ public class PlayerInteractionController : MonoBehaviour {
     }
 
     static void AddSceneAdditive(Interactables target) {
+		MetagameController.RecordPlayerPosition ();
         SceneManager.LoadScene(target.MiniGameName);
     }
 
