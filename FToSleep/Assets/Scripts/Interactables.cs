@@ -8,6 +8,9 @@ public class Interactables : MonoBehaviour {
 
     [SerializeField]
     private string m_SceneToLoad;
+    [SerializeField]
+    private string m_PromptMessage;
+
 
     public string MiniGameName {
         get
@@ -22,6 +25,14 @@ public class Interactables : MonoBehaviour {
 			return m_id;
 		}
 	}
+
+    public string PromptMessage
+    {
+        get
+        {
+            return m_PromptMessage;
+        }
+    }
 
 
     void Awake() {
