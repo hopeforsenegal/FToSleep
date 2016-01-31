@@ -1360,6 +1360,7 @@ MonoBehaviour:
   m_SceneToLoad: Lullaby
   m_PromptMessage: They can't stop what I started...
   m_PromptSound: {fileID: 8300000, guid: 1c00e4e83d1014cb7be81caa568860ea, type: 3}
+  m_SplashBackground: {fileID: 21300000, guid: b3c6cbfaac821004eaca42e18603b363, type: 3}
 --- !u!65 &518994449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1856,6 +1857,7 @@ MonoBehaviour:
   m_SceneToLoad: Bathroom
   m_PromptMessage: I never feel good about them leaving
   m_PromptSound: {fileID: 8300000, guid: 85cf3a04e4fe448fca9de282ba0d6745, type: 3}
+  m_SplashBackground: {fileID: 21300000, guid: 143e658027cc144bfa4dbc2938fefae1, type: 3}
 --- !u!65 &640728758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7151,6 +7153,7 @@ MonoBehaviour:
   m_SceneToLoad: Doors
   m_PromptMessage: If they get in, they get INSIDE ME!
   m_PromptSound: {fileID: 8300000, guid: 308057ea721fa469db133b0a29d647f3, type: 3}
+  m_SplashBackground: {fileID: 21300000, guid: 5da3c4cbff8a04f62840a9a6c399131a, type: 3}
 --- !u!65 &2081653645
 BoxCollider:
   m_ObjectHideFlags: 0
