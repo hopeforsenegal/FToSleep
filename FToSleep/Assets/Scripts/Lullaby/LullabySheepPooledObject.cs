@@ -106,6 +106,7 @@ public class LullabySheepPooledObject : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.name == "Paddle") {
+			LullabyManager.Instance.PlaySnore ();
 			gameObject.SetActive (false);
 		}
 	}

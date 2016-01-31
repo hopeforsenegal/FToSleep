@@ -20,6 +20,9 @@ public class LullabyManager : MonoBehaviour
 	private float trackingTime = 0.0f;
 	private int countDownEndSeconds = 0;
 	private Canvas canvas;
+	public AudioClip lullabyMusic;
+	public AudioClip ambienceMusic;
+	public AudioClip snore;
 	public int endCountdownTime = 60;
 	public bool matchStarted;
 	public bool startGameOnLaunch;
@@ -103,6 +106,9 @@ public class LullabyManager : MonoBehaviour
 	{
 		Debug.Log ("Start Lullaby Game");
 
+		AudioController.PlayMusic (lullabyMusic);
+		AudioController.PlayMusic2 (ambienceMusic);
+
 		matchStarted = true;
 		canvas.gameObject.SetActive (true);
 	}
@@ -165,5 +171,15 @@ public class LullabyManager : MonoBehaviour
 	{
 		countDownEndSeconds = endCountdownTime;
 		RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
+	}
+
+	public void PlayDemonScream ()
+	{
+		//AudioController.PlaySoundEffect (soundEffect);
+	}
+
+	public void PlaySnore ()
+	{
+		AudioController.PlaySoundEffect (snore);
 	}
 }

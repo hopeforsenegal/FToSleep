@@ -27,6 +27,7 @@ public class AudioController : MonoBehaviour
 	private static AudioController instance;
 
 	public AudioSource musicAudioSource;
+	public AudioSource musicAudioSource2;
 	public AudioSource soundEffectAudioSource;
 
 	protected void Awake ()
@@ -47,6 +48,17 @@ public class AudioController : MonoBehaviour
 				Debug.Log ("PlayMusic: " + clip.name);
 				instance.musicAudioSource.clip = clip;
 				instance.musicAudioSource.Play ();
+			}
+		}
+	}
+
+	public static void PlayMusic2 (AudioClip clip)
+	{
+		if (instance) {
+			if (instance.musicAudioSource2.clip.name != clip.name) {
+				Debug.Log ("PlayMusic2: " + clip.name);
+				instance.musicAudioSource2.clip = clip;
+				instance.musicAudioSource2.Play ();
 			}
 		}
 	}
