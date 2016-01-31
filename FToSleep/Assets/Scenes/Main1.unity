@@ -6454,7 +6454,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_id: 2
   m_SceneToLoad: Bathroom
-  m_PromptMessage: I gotta go so bad!
+  m_PromptMessage: Please don't hurt me this time...
+  m_PromptSound: {fileID: 8300000, guid: 85cf3a04e4fe448fca9de282ba0d6745, type: 3}
 --- !u!65 &1736803388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7679,7 +7680,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_id: 3
   m_SceneToLoad: Lullaby
-  m_PromptMessage: I'm so tired, I need to sleep
+  m_PromptMessage: They invade my deams. I can't stop them...
+  m_PromptSound: {fileID: 0}
 --- !u!65 &2073296854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7817,6 +7819,7 @@ MonoBehaviour:
   m_id: 1
   m_SceneToLoad: Doors
   m_PromptMessage: No matter what, I can't let them in!
+  m_PromptSound: {fileID: 8300000, guid: 308057ea721fa469db133b0a29d647f3, type: 3}
 --- !u!65 &2093579658
 BoxCollider:
   m_ObjectHideFlags: 0

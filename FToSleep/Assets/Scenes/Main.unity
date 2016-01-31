@@ -6416,7 +6416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_id: 2
   m_SceneToLoad: Bathroom
-  m_PromptMessage: I gotta go so bad!
+  m_PromptMessage: I wonder what will come out
   m_PromptSound: {fileID: 8300000, guid: 85cf3a04e4fe448fca9de282ba0d6745, type: 3}
 --- !u!65 &1844263810
 BoxCollider:
@@ -7187,7 +7187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_id: 3
   m_SceneToLoad: Lullaby
-  m_PromptMessage: I'm so tired, I need to sleep
+  m_PromptMessage: I hope I don't have those dreams again...
   m_PromptSound: {fileID: 8300000, guid: 1c00e4e83d1014cb7be81caa568860ea, type: 3}
 --- !u!65 &2111585275
 BoxCollider:
@@ -7274,7 +7274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_id: 1
   m_SceneToLoad: Doors
-  m_PromptMessage: No matter what, I can't let them in!
+  m_PromptMessage: Maybe there's nothing there
   m_PromptSound: {fileID: 8300000, guid: 308057ea721fa469db133b0a29d647f3, type: 3}
 --- !u!65 &2131553860
 BoxCollider:

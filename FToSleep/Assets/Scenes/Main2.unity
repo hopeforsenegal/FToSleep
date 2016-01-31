@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.2647059, g: 0.2647059, b: 0.2647059, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 0.08
+  m_AmbientIntensity: 0.25
   m_AmbientMode: 3
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -1358,8 +1358,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_id: 3
   m_SceneToLoad: Lullaby
-  m_PromptMessage: I'm so tired, I need to sleep
-  m_PromptSound: {fileID: 0}
+  m_PromptMessage: They can't stop what I started...
+  m_PromptSound: {fileID: 8300000, guid: 1c00e4e83d1014cb7be81caa568860ea, type: 3}
 --- !u!65 &518994449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1854,8 +1854,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_id: 2
   m_SceneToLoad: Bathroom
-  m_PromptMessage: I gotta go so bad!
-  m_PromptSound: {fileID: 0}
+  m_PromptMessage: I never feel good about them leaving
+  m_PromptSound: {fileID: 8300000, guid: 85cf3a04e4fe448fca9de282ba0d6745, type: 3}
 --- !u!65 &640728758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2248,7 +2248,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &837719997
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7496,8 +7496,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_id: 1
   m_SceneToLoad: Doors
-  m_PromptMessage: No matter what, I can't let them in!
-  m_PromptSound: {fileID: 0}
+  m_PromptMessage: If they get in, they get INSIDE ME!
+  m_PromptSound: {fileID: 8300000, guid: 308057ea721fa469db133b0a29d647f3, type: 3}
 --- !u!65 &2081653645
 BoxCollider:
   m_ObjectHideFlags: 0
