@@ -4,6 +4,7 @@ using System.Collections;
 public class DoorsCylinderController : MonoBehaviour {
 
 	private DoorsCylinder _cylinder;
+	private DoorsCylinderSprite _cylinderSprite;
 	private DoorsPin[] _doorsPins;
 	private DoorsSlot[] _doorsSlots;
 	private bool _complete = false;
@@ -13,7 +14,7 @@ public class DoorsCylinderController : MonoBehaviour {
 		int doorsPinSortingOrder = sortingOrder * 3;
 		int doorsSlotSortingOrder = sortingOrder * 3 + 2;
 
-		_cylinder.SetSortingOrder (cylinderSortingOrder);
+		_cylinderSprite.SetSortingOrder (cylinderSortingOrder);
 		foreach (DoorsPin pin in _doorsPins) {
 			pin.SetSortingOrder (doorsPinSortingOrder);
 		}
@@ -29,6 +30,7 @@ public class DoorsCylinderController : MonoBehaviour {
 	void Awake () {
 		gameObject.SetActive (false);
 		_cylinder = GetComponentInChildren<DoorsCylinder>();
+		_cylinderSprite = GetComponentInChildren<DoorsCylinderSprite>();
 		_doorsPins = GetComponentsInChildren<DoorsPin>();
 		_doorsSlots = GetComponentsInChildren<DoorsSlot>();
 	}

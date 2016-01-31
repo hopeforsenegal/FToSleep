@@ -7,13 +7,6 @@ public class DoorsCylinder : MonoBehaviour {
 	private float _stepAmount = 45.0f;
 	private float _speed = 5.0f;
 
-	public void SetSortingOrder( int sortingOrder ) {
-		SpriteRenderer sprite = GetComponent<SpriteRenderer> ();
-		if (sprite) {
-			sprite.sortingOrder = sortingOrder;
-		}
-	}
-
 	public void RotateCylinder () {
 		if (Input.GetAxis ("Horizontal") > 0) {
 			_currentStep--;
