@@ -56,6 +56,7 @@ public class DoorsManager : MonoBehaviour {
 
 			// If the time has run down 
 			if (countDownEndSeconds <= 0) {
+				MetagameController.IncreaseInsanity ();
 				EndGame ();
 			}
 		}
@@ -83,6 +84,8 @@ public class DoorsManager : MonoBehaviour {
 		Debug.Log ("End Doors Game");
 
 		matchStarted = false;
+
+		MetagameController.GoToMain ();
 	}
 
 	public void CylinderComplete () {

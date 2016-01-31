@@ -4,9 +4,9 @@ using System.Collections;
 public class DoorsPin : MonoBehaviour {
 
 	private float _speed = 5.0f;
-	private Vector3 _upPos = new Vector3 (0.0f, 3.0f, 0.0f);
-	private Vector3 _bouncePos = new Vector3 (0.0f, 1.7f, 0.0f);
-	private Vector3 _downPos = new Vector3 (0.0f, 0.0f, 0.0f);
+	private float _upPos = 3.0f;
+	private float _bouncePos =  1.7f;
+	private float _downPos = 0.0f;
 	private Vector3 _currentPos;
 	private bool _bounce = false;
 
@@ -19,17 +19,18 @@ public class DoorsPin : MonoBehaviour {
 
 	public void Insert () {
 		_bounce = false;
-		_currentPos = _downPos;
+		_currentPos.y = _downPos;
 	}
 
 	public void Bounce () {
 		_bounce = true;
-		_currentPos = _bouncePos;
+		_currentPos.y = _bouncePos;
 	}
 
 	// Use this for initialization
 	void Start () {
-		_currentPos = _upPos;
+		_currentPos = transform.localPosition;
+		_currentPos.y = _upPos;
 		UpdatePosition (false);
 	}
 	
@@ -42,9 +43,9 @@ public class DoorsPin : MonoBehaviour {
 		if (animate) {
 			if (_bounce && transform.localPosition == _currentPos) {
 				_bounce = false;
-				_currentPos = _upPos;
+				_currentPos.y = _upPos;
 			}
-			transform.localPosition = Vector3.Slerp (transform.localPosition, _currentPos, _speed * Time.deltaTime);
+			transform.localPosition = Vector3.Lerp (transform.localPosition, _currentPos, _speed * Time.deltaTime);
 		} else {
 			transform.localPosition = _currentPos;
 		}
