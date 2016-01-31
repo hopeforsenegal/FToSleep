@@ -81,6 +81,13 @@ public class BathroomManager : MonoBehaviour
 		MetagameController.GoToMain ();
 	}
 
+	public void GetSawed(){
+		// Play some sound
+
+
+		MetagameController.IncreaseInsanity();
+	}
+
 	public void RestartCountdown ()
 	{
 		countDownEndSeconds = endCountdownTime;

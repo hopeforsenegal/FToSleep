@@ -26,9 +26,9 @@ public class DestroyerScript : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")
-        {
-            // TODO - end game
-            Debug.Break();
+		{
+			BathroomManager.Instance.GetSawed ();
+			BathroomManager.Instance.EndGame ();
         }
     }
 }

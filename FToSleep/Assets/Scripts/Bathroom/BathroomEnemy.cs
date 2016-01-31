@@ -6,21 +6,50 @@ using System.Collections.Generic;
 [RequireComponent (typeof(BoxCollider2D))]
 public class BathroomEnemy : MonoBehaviour
 {
-	void OnCollisionEnter2D(Collision2D coll) {
+	private Knight2D mainPlayer;
+
+	protected void Awake ()
+	{
+	}
+
+	protected void Start ()
+	{
+		GameObject tempObject;
+		tempObject = GameObject.Find ("Knight");
+		if (tempObject != null) {
+			mainPlayer = tempObject.GetComponent<Knight2D> ();
+		}
+
+		Debug.Assert (tempObject != null);
+		Debug.Assert (mainPlayer != null);
+	}
+
+	void OnCollisionEnter2D (Collision2D coll)
+	{
 		Debug.Log ("Did you swing at me?");
-		if (coll.gameObject.name == "Sword") {
+		if (coll.gameObject.name == "Knight") {
 			Debug.Log ("Et tu, Brute?");
+			Debug.Assert (mainPlayer != null);
+			if (mainPlayer) {
+				mainPlayer.GotTouched ();
+			}
+		}
+		if (coll.gameObject.name == "Sword") {
+			Debug.Log ("Sword");
 			gameObject.SetActive (false);
 		}
 	}
 
-    void OnTriggerEnter2D(Collider2D otherObject)
-    {
-        Debug.Log("Got hit by sword?");
-        if(otherObject.name == "AttackTrigger")
-        {
-            Debug.Log("Attack Trigger");
-            gameObject.SetActive(false);
-        }
-    }
+	void OnTriggerEnter2D (Collider2D otherObject)
+	{
+		Debug.Log ("Got hit by sword?");
+		if (otherObject.name == "Sword") {
+			Debug.Log ("Attack Trigger");
+			gameObject.SetActive (false);
+		}
+		if (otherObject.name == "AttackTrigger") {
+			Debug.Log ("Sword");
+			gameObject.SetActive (false);
+		}
+	}
 }
