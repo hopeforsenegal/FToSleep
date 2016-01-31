@@ -65,6 +65,10 @@ public class DoorsManager : MonoBehaviour {
 	{
 		Debug.Log ("Start Doors Game");
 
+		for (int index = 0; index < cylinderControllers.Length; index++) {
+			cylinderControllers [index].SetSortingOrder (index);
+		}
+
 		matchStarted = true;
 		cylinderControllers [_currentCylinderIndex].StartCylinderPuzzle ();
 	}

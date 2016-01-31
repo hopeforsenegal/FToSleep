@@ -10,6 +10,13 @@ public class DoorsPin : MonoBehaviour {
 	private Vector3 _currentPos;
 	private bool _bounce = false;
 
+	public void SetSortingOrder( int sortingOrder ) {
+		SpriteRenderer sprite = GetComponent<SpriteRenderer> ();
+		if (sprite) {
+			sprite.sortingOrder = sortingOrder;
+		}
+	}
+
 	public void Insert () {
 		_bounce = false;
 		_currentPos = _downPos;

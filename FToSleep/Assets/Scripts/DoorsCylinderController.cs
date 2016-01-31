@@ -5,7 +5,22 @@ public class DoorsCylinderController : MonoBehaviour {
 
 	private DoorsCylinder _cylinder;
 	private DoorsPin[] _doorsPins;
+	private DoorsSlot[] _doorsSlots;
 	private bool _complete = false;
+
+	public void SetSortingOrder( int sortingOrder ) {
+		int cylinderSortingOrder = sortingOrder * 3 + 1;
+		int doorsPinSortingOrder = sortingOrder * 3;
+		int doorsSlotSortingOrder = sortingOrder * 3 + 2;
+
+		_cylinder.SetSortingOrder (cylinderSortingOrder);
+		foreach (DoorsPin pin in _doorsPins) {
+			pin.SetSortingOrder (doorsPinSortingOrder);
+		}
+		foreach (DoorsSlot slot in _doorsSlots) {
+			slot.SetSortingOrder (doorsSlotSortingOrder);
+		}
+	}
 
 	public void StartCylinderPuzzle () {
 		gameObject.SetActive(true);
@@ -13,12 +28,9 @@ public class DoorsCylinderController : MonoBehaviour {
 
 	void Awake () {
 		gameObject.SetActive (false);
-	}
-
-	// Use this for initialization
-	void Start () {
 		_cylinder = GetComponentInChildren<DoorsCylinder>();
 		_doorsPins = GetComponentsInChildren<DoorsPin>();
+		_doorsSlots = GetComponentsInChildren<DoorsSlot>();
 	}
 	
 	// Update is called once per frame
