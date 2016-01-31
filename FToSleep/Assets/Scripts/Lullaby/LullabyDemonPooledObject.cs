@@ -105,6 +105,7 @@ public class LullabyDemonPooledObject : MonoBehaviour
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.name == "Paddle") {
 			LullabyManager.Instance.numberOfMisses = 4;
+			LullabyManager.Instance.PlayDemonScream ();
 			gameObject.SetActive (false);
 		}
 	}
