@@ -43,16 +43,20 @@ public class DoorsCylinderController : MonoBehaviour {
 				foreach (DoorsPin pin in _doorsPins) {
 					if (_cylinder.IsInSolvedPosition ()) {
 						pin.Insert ();
+						_complete = true;
 					} else {
 						pin.Bounce ();
 					}
 				}
-				if (_cylinder.IsInSolvedPosition ()) {
-					DoorsManager.Instance.CylinderComplete ();
-					_complete = true;
+				if (_complete) {
+					Invoke ("Complete", 1);
 				}
 			}
 		}
+	}
+
+	void Complete () {
+		DoorsManager.Instance.CylinderComplete ();
 	}
 
 }
