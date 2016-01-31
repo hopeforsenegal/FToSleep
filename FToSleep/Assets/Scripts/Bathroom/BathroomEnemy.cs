@@ -6,11 +6,22 @@ using System.Collections.Generic;
 [RequireComponent (typeof(BoxCollider2D))]
 public class BathroomEnemy : MonoBehaviour
 {
+	private Knight2D mainPlayer;
+	protected void Awake(){
+		GameObject tempObject;
+		tempObject = GameObject.Find ("Canvas");
+		if (tempObject != null) {
+			mainPlayer = tempObject.GetComponent<Knight2D> ();
+		}
+	}
+
 	void OnCollisionEnter2D(Collision2D coll) {
 		Debug.Log ("Did you swing at me?");
-		if (coll.gameObject.name == "Sword") {
+		if (coll.gameObject.name == "Knight") {
 			Debug.Log ("Et tu, Brute?");
-			gameObject.SetActive (false);
+			if (mainPlayer) {
+				mainPlayer.GotTouched ();
+			}
 		}
 	}
 

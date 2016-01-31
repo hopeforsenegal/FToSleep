@@ -127,6 +127,9 @@ public class Knight2D : MonoBehaviour {
         }
     }
 
+	public void GotTouched(){
+		transform.position -= transform.right * 10;
+	}
 
     private void Flip()
     {
