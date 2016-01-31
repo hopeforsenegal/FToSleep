@@ -31,7 +31,8 @@ public class DestroyerScript : MonoBehaviour
 	{
 		if (other.tag == "Player" && didHit == false) {
 			didHit = true;
-			BathroomManager.Instance.GetSawed ();
+			MetagameController.IncreaseInsanity ();
+			MetagameController.AbleToRetryPlayedGame ();
 			BathroomManager.Instance.EndGame ();
 		}
 	}

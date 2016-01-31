@@ -56,6 +56,8 @@ public class BathroomManager : MonoBehaviour
 
 			// If the time has run down 
 			if (countDownEndSeconds <= 0) {
+				MetagameController.IncreaseInsanity ();
+				MetagameController.AbleToRetryPlayedGame ();
 				EndGame ();
 			}
 		}
@@ -81,12 +83,6 @@ public class BathroomManager : MonoBehaviour
 		AudioController.StopAllSounds ();
 		matchStarted = false;
 		MetagameController.GoToMain ();
-	}
-
-	public void GetSawed ()
-	{
-		MetagameController.IncreaseInsanity ();
-		MetagameController.AbleToRetryPlayedGame ();
 	}
 
 	public void RestartCountdown ()
