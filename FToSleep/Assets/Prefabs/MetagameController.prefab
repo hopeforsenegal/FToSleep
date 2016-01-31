@@ -39,6 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d2f77e90fb74a029ddf8e9c6f8d0c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  insanityFail: {fileID: 8300000, guid: fa4ed427154f140e5b7db827306b1b4f, type: 3}
   endCountdownTime: 300
 --- !u!1001 &100100000
 Prefab:

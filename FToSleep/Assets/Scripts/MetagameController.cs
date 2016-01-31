@@ -19,6 +19,8 @@ public class MetagameController : MonoBehaviour
 	private TransformData playerTransformData;
 	private int insanity = 0;
 	private bool[] gamesPlayed = new bool[4];
+	public AudioClip startSoundEffect;
+	public AudioClip insanityFail;
 
 	private bool gameRunning = false;
 	private float deltaTime = 0.0f;
@@ -92,6 +94,7 @@ public class MetagameController : MonoBehaviour
 	public void StartGame ()
 	{
 		Debug.Log ("Start Overall Game");
+		AudioController.PlaySoundEffect (startSoundEffect);
 		gamesPlayed = new bool[4];
 		gameRunning = true;
 	}
@@ -143,6 +146,12 @@ public class MetagameController : MonoBehaviour
 		if (IsActive ()) {
 			Debug.Log ("IncreaseInsanity:" + instance.insanity);
 			instance.insanity++;
+		}
+	}
+
+	public static void PlayInsanitySound(){
+		if (IsActive ()) {
+			AudioController.PlaySoundEffect (instance.insanityFail);
 		}
 	}
 
