@@ -117,7 +117,7 @@ Transform:
   m_Children:
   - {fileID: 476024977}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &4221722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1938,6 +1938,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 392134963}
   m_Mesh: {fileID: 4300002, guid: 3f44a0fb734fa174da2c72eaabb6c799, type: 3}
+--- !u!4 &427354835 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: a491f237f2f625943bd17b3c5a581cee, type: 3}
+  m_PrefabInternal: {fileID: 643124197}
 --- !u!1 &428462810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2409,8 +2413,9 @@ Transform:
   - {fileID: 1583610505}
   - {fileID: 442242495}
   - {fileID: 774730883}
+  - {fileID: 427354835}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &579438370
 GameObject:
   m_ObjectHideFlags: 0
@@ -2747,19 +2752,19 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 569616091}
     m_Modifications:
     - target: {fileID: 400000, guid: a491f237f2f625943bd17b3c5a581cee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.105
+      value: -2.0555882
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a491f237f2f625943bd17b3c5a581cee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.31
+      value: -3.3501563
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a491f237f2f625943bd17b3c5a581cee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.782
+      value: -1.255209
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a491f237f2f625943bd17b3c5a581cee, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2779,7 +2784,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a491f237f2f625943bd17b3c5a581cee, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a491f237f2f625943bd17b3c5a581cee, type: 3}
       propertyPath: m_LocalScale.x
@@ -4327,7 +4332,7 @@ Transform:
   - {fileID: 1010423997}
   - {fileID: 1418549283}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1297693738
 GameObject:
   m_ObjectHideFlags: 0
@@ -4983,7 +4988,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &1548723236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4996,6 +5001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d2f77e90fb74a029ddf8e9c6f8d0c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSoundEffect: {fileID: 8300000, guid: 583b944e2a4174ea49a588b264c0c894, type: 3}
+  insanityFail: {fileID: 8300000, guid: 8df1c57aedfa34d0a8bf85c463e73db7, type: 3}
   endCountdownTime: 300
 --- !u!1 &1558969309
 GameObject:
@@ -6015,6 +6022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0daaf4d880f46e4397eac33cb14048b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_id: 0
   m_SceneToLoad: Bathroom
 --- !u!65 &1844263810
 BoxCollider:
@@ -6238,7 +6246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &1977978807
 GameObject:
   m_ObjectHideFlags: 0
@@ -6577,7 +6585,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &2064809591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6716,6 +6724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0daaf4d880f46e4397eac33cb14048b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_id: 0
   m_SceneToLoad: Lullaby
 --- !u!65 &2111585275
 BoxCollider:
@@ -6800,6 +6809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0daaf4d880f46e4397eac33cb14048b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_id: 0
   m_SceneToLoad: Doors
 --- !u!65 &2131553860
 BoxCollider:
