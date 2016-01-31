@@ -83,6 +83,8 @@ public class DoorsManager : MonoBehaviour {
 		Debug.Log ("End Doors Game");
 
 		matchStarted = false;
+
+		MetagameController.GoToMain ();
 	}
 
 	public void CylinderComplete () {
