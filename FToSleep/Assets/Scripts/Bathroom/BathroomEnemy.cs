@@ -10,12 +10,17 @@ public class BathroomEnemy : MonoBehaviour
 
 	protected void Awake ()
 	{
+	}
+
+	protected void Start ()
+	{
 		GameObject tempObject;
 		tempObject = GameObject.Find ("Knight");
 		if (tempObject != null) {
 			mainPlayer = tempObject.GetComponent<Knight2D> ();
 		}
 
+		Debug.Assert (tempObject != null);
 		Debug.Assert (mainPlayer != null);
 	}
 
