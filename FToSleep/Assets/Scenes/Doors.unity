@@ -1313,7 +1313,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bcf2bcd116a2f4cfba814185e522d04f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c219cf0b2b79348a9ae1528a10c499c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1383,7 +1383,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bcf2bcd116a2f4cfba814185e522d04f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df84be35e067643fa8398bebac0f7245, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2595,7 +2595,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bcf2bcd116a2f4cfba814185e522d04f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df84be35e067643fa8398bebac0f7245, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3121,7 +3121,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bcf2bcd116a2f4cfba814185e522d04f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c219cf0b2b79348a9ae1528a10c499c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3314,7 +3314,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bcf2bcd116a2f4cfba814185e522d04f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df84be35e067643fa8398bebac0f7245, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4242,7 +4242,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bcf2bcd116a2f4cfba814185e522d04f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c219cf0b2b79348a9ae1528a10c499c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
