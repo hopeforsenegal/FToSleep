@@ -18,8 +18,7 @@ public class MetagameController : MonoBehaviour
 
 	private TransformData playerTransformData;
 	private int insanity = 0;
-	private int numberOfLoses = 0;
-	private bool[] gamesPlayed = new bool[4];
+	public bool[] gamesPlayed = new bool[4];
 	public AudioClip startSoundEffect;
 	public AudioClip insanityFail;
 
@@ -78,7 +77,8 @@ public class MetagameController : MonoBehaviour
 				//RemainingTimeText.SetTimeRemaining (countDownEndSeconds);
 			}
 
-			if (gamesPlayed [1] == gamesPlayed [2] == gamesPlayed [3] == true && SceneManager.GetActiveScene().name.Contains("Main")) {
+			if (gamesPlayed [1] == true && gamesPlayed [2] == true && true && gamesPlayed [3] == true && SceneManager.GetActiveScene().name.Contains("Main")) {
+				
 				Debug.Break();
 			}
 
@@ -101,7 +101,7 @@ public class MetagameController : MonoBehaviour
 	{
 		Debug.Log ("Start Overall Game");
 		AudioController.PlaySoundEffect (startSoundEffect);
-		gamesPlayed = new bool[4];
+		gamesPlayed = new bool[4]{false, false, false, false};
 		gameRunning = true;
 	}
 
