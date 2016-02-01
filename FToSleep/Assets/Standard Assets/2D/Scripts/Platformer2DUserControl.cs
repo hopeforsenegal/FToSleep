@@ -25,7 +25,7 @@ namespace UnityStandardAssets._2D
         private void FixedUpdate()
         {
             // Read the inputs.
-            bool attack = CrossPlatformInputManager.GetButtonDown("Fire1");
+            bool attack = false; // CrossPlatformInputManager.GetButtonDown("Fire1");
              float h = CrossPlatformInputManager.GetAxis("Horizontal");
             // Pass all parameters to the character control script.
             m_Character.Move(h, false, false);
